@@ -1,0 +1,538 @@
+
+comment.insert_new_line_before_root_tags（insert/do_not_insert）
+	在Javadoc根标记块前插入空行，默认为insert；
+insert_space_after_comma_in_annotation（insert/do_not_insert）
+	在注释中的逗号后面插入空格,默认为insert；
+insert_space_before_comma_in_type_parameters（insert/do_not_insert）
+	class<T,E> -> class<T ,E>
+	用于在类型参数中在逗号前插入空格，默认为do_not_insert；
+insert_space_before_opening_brace_in_type_declaration（insert/do_not_insert）
+	用于在类型声明中打开括号之前插入空格，默认为insert；
+insert_space_after_comma_in_type_arguments（insert/do_not_insert）
+	用于在类型参数的逗号后面插入空格，默认为insert；
+brace_position_for_anonymous_type_declaration（END_OF_LINE, NEXT_LINE, next_line_shift, NEXT_LINE_ON_WRAP）
+	用于定位匿名类型声明的大括号，默认值:END_OF_LINE；
+insert_space_before_colon_in_case（insert/do_not_insert）
+	case a: -> case a : 
+	在冒号之前插入一个空格，在case语句中，默认为insert；
+insert_space_after_opening_brace_in_array_initializer（insert/do_not_insert）
+	用于在数组初始化器的开始括号之后插入空格，默认为do_not_insert；insert_new_line_in_empty_annotation_declaration（insert/do_not_insert）
+	在空注释声明，默认为insert；insert_new_line_before_closing_brace_in_array_initializer（insert/do_not_insert）
+	在数组初始化器的关闭括号之前插入新行，默认值:DO_NOT_INSERT；
+insert_space_after_opening_paren_in_annotation（insert/do_not_insert）
+	在注释中打开括号后插入空格，默认值:DO_NOT_INSERT；
+blank_lines_before_field（其中n为零或正整数）
+	用于在字段声明之前添加空行，默认为:0；insert_space_after_opening_paren_in_while（insert/do_not_insert）
+	在一个while语句后面插入一个空格，默认值:DO_NOT_INSERT；insert_space_between_empty_parens_in_annotation_type_member_declaration（insert/do_not_insert）
+	用于在注释类型成员声明中的空括号之间插入空格，默认值:DO_NOT_INSERT；
+insert_new_line_before_else_in_if_statement（insert/do_not_insert）
+	用于在if语句中的else关键字之前插入新行，默认值:DO_NOT_INSERT；
+insert_space_after_prefix_operator（insert/do_not_insert）
+	在前缀运算符之后插入空格的格式化，默认值:DO_NOT_INSERT；
+keep_else_statement_on_same_line（TRUE, FALSE）
+	以在同一行上保留else语句,默认为false;
+insert_space_after_ellipsis（insert/do_not_insert）
+	在省略之后插入一个空格,默认为insert；
+comment.insert_new_line_for_parameter（insert/do_not_insert）
+	在Javadoc根标记参数之后插入新行,默认为insert；
+insert_space_before_opening_brace_in_annotation_type_declaration（insert/do_not_insert）
+	在注释类型声明的开始括号之前插入空格,默认为insert；
+indent_breaks_compare_to_cases（TRUE, FALSE）
+	与cases相比，可以选择缩进中断,默认为true;
+insert_space_after_at_in_annotation（insert/do_not_insert）
+	在注释后面插入空格,默认为insert；
+alignment_for_multiple_fields
+	用于对多个字段进行对齐，可能的值:由createAlignmentValue(boolean, int, int)调用返回的值——默认值:createAlignmentValue(false, WRAP_COMPACT, INDENT_DEFAULT)；
+alignment_for_expressions_in_array_initializer
+	用于数组初始化器中表达式对齐的格式化，可能的值:由createAlignmentValue(boolean, int, int)调用返回的值，默认:createAlignmentValue(false, WRAP_COMPACT, INDENT_DEFAULT)
+alignment_for_conditional_expression
+	条件表达式对齐的格式化；insert_space_before_opening_paren_in_for（insert/do_not_insert）
+	用于在for语句的圆括号前插入一个空格,默认为insert；
+insert_space_after_binary_operator（insert/do_not_insert）
+	在二进制操作符之后插入空格,默认为insert；
+insert_space_before_question_in_wildcard（insert/do_not_insert）
+	在通配符中问号前插入空格，默认值:DO_NOT_INSERT；
+brace_position_for_array_initializer（END_OF_LINE, NEXT_LINE, next_line_shift, NEXT_LINE_ON_WRAP）
+	用于定位数组初始化程序的大括号，默认值:END_OF_LINE；
+insert_space_between_empty_parens_in_enum_constant（insert/do_not_insert）
+	用于在enum常量的空括号之间插入空格，默认值:DO_NOT_INSERT；
+insert_new_line_before_finally_in_try_statement（insert/do_not_insert）
+	用于在try语句中的finally关键字之前插入新行，默认值:DO_NOT_INSERT；insert_new_line_after_annotation_on_local_variable（insert/do_not_insert）
+	在本地变量注释后插入新行，默认:INSERT；
+insert_new_line_before_catch_in_try_statement（insert/do_not_insert）
+	try{}catch{} -> try{}'\n'catch{}
+	在try语句，在catch关键字之前插入新行，默认值:DO_NOT_INSERT；
+insert_space_before_opening_paren_in_while（insert/do_not_insert）
+	用于在while语句中打开括号之前插入空格,默认为insert；
+blank_lines_after_package（其中n为0或为正整数）
+	用于在包声明之后添加空行，默认值:“0”；
+insert_space_after_comma_in_type_parameters（insert/do_not_insert）
+	在类型参数中，在逗号之后插入空格,默认为insert；
+continuation_indentation（其中n为零或正整数）
+	设置延续缩进,默认值:“2”;
+insert_space_after_postfix_operator（insert/do_not_insert）
+	在后缀操作符之后插入空格的,默认值:DO_NOT_INSERT;
+alignment_for_arguments_in_method_invocation
+	用于方法调用中参数对齐的;
+insert_space_before_closing_angle_bracket_in_type_arguments（insert/do_not_insert）
+	在类型参数的关闭角括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_comma_in_superinterfaces（insert/do_not_insert）
+	在类型头中的超接口名称中插入逗号前的空格,默认值:DO_NOT_INSERT;
+blank_lines_before_new_chunk（其中n为零或正整数）
+	用于在新块之前添加空行,默认值:“0;
+blank_lines_before_package（其中n为零或正整数）
+	在包声明之前添加空行,默认值:“0;
+insert_space_after_comma_in_enum_constant_arguments（insert/do_not_insert）
+	用于在enum常量,在逗号之后插入空格,默认为insert；
+insert_space_after_opening_paren_in_constructor_declaration（insert/do_not_insert）
+	构造函数声明中插入空格,默认:DO_NOT_INSERT;
+insert_space_after_closing_angle_bracket_in_type_arguments（insert/do_not_insert）
+	在类型参数的结束角括号之后插入空格,默认为insert；
+comment.format_line_comments（TRUE, FALSE）
+	控制单行注释是否格式化,默认为TRUE;
+insert_space_after_comma_in_enum_declarations（insert/do_not_insert）
+	在enum声明中，在逗号后插入空格,默认值:INSERT;
+insert_space_before_opening_brace_in_block（insert/do_not_insert）
+	用于在块中打开括号之前插入空格,默认值:INSERT;
+alignment_for_arguments_in_explicit_constructor_call
+	用于显式构造函数调用中的参数对齐;
+insert_space_before_comma_in_method_invocation_arguments（insert/do_not_insert）
+	call method(a,b) 要不要 call method(a ,b)
+	在方法调用的参数中，在逗号之前插入空格,默认:DO_NOT_INSERT;
+blank_lines_before_member_type（其中n为零或正整数）
+	用于在成员类型声明之前添加空行,默认值:“0;
+align_type_members_on_columns（TRUE, FALSE）
+	在列上对齐类型声明的类型成员,默认为false;
+insert_space_after_opening_paren_in_enum_constant（insert/do_not_insert）
+	在enum常量中打开括号之后插入空格，默认值:DO_NOT_INSERT；
+insert_space_after_opening_paren_in_for（insert/do_not_insert）
+	在for语句中插入空格后插入空格，默认值:DO_NOT_INSERT；
+insert_space_before_opening_brace_in_method_declaration（insert/do_not_insert）
+	用于在方法声明中的打开括号之前插入空格,默认值:INSERT;
+alignment_for_selector_in_method_invocation
+	方法调用中选择器对齐；
+insert_space_after_opening_paren_in_switch（insert/do_not_insert）
+	用于在switch语句中打开括号后插入空格，默认值:DO_NOT_INSERT；
+insert_space_after_unary_operator（insert/do_not_insert）
+	在一个一元操作符后面插入空格，默认值:DO_NOT_INSERT；
+insert_space_after_colon_in_case（insert/do_not_insert）
+	用于在case语句中,当冒号后插入空格,默认值:INSERT;
+indent_parameter_description（TRUE, FALSE）
+	用于控制Javadoc参数的描述是否缩进，默认为TRUE；
+insert_space_before_closing_paren_in_method_declaration（insert/do_not_insert）
+	public void method(int x) 要不要 public void method(int x )
+	在方法声明中的结束括号之前插入空格，默认值:DO_NOT_INSERT；
+insert_space_before_closing_paren_in_switch（insert/do_not_insert）
+	在switch语句中关闭括号之前插入空格，默认值:DO_NOT_INSERT；
+insert_space_before_opening_brace_in_enum_declaration（insert/do_not_insert）
+	在enum声明的开始括号之前插入空格，默认值:INSERT;
+insert_space_before_opening_angle_bracket_in_type_parameters（insert/do_not_insert）
+	class<T> -> class <T>
+	在类型参数前插入空格，默认值:DO_NOT_INSERT；
+insert_new_line_in_empty_type_declaration（insert/do_not_insert）
+	在空类型声明中插入新行，默认值:INSERT;
+comment.clear_blank_lines_in_block_comment（TRUE, FALSE）
+	用于控制块注释中的空行是否被清除，默认为FLASE;
+insert_space_before_opening_paren_in_if（insert/do_not_insert）
+	用于在if语句中打开括号之前插入空格,默认值:INSERT;
+insert_space_between_brackets_in_array_type_reference（insert/do_not_insert）
+	用于在数组类型引用的括号中插入空格，默认值:DO_NOT_INSERT；
+insert_space_after_opening_paren_in_parenthesized_expression（insert/do_not_insert）
+	用于在圆括号中展开括号之后插入空格，默认值:DO_NOT_INSERT；
+insert_space_before_comma_in_explicitconstructorcall_arguments（insert/do_not_insert）
+	在显式构造函数调用的参数中插入逗号前的空格，默认值:DO_NOT_INSERT；
+insert_space_before_opening_brace_in_constructor_declaration（insert/do_not_insert）
+	在构造函数声明的开始括号之前插入空格,默认值:INSERT;
+blank_lines_before_first_class_body_declaration（n为0或正整数）
+	class{} -> class(n*'\n')
+	在第一个类body声明之前添加空行,-默认值:"0";
+indentation.size（其中n为0或正整数）
+	指定表示一个缩进的等效空格数,只有当选项卡char设置为混合时才使用此选项,默认值:“4”;
+insert_space_between_empty_parens_in_method_declaration（insert/do_not_insert）
+	void method() 要不要 void method( )
+	用于在方法声明中的空括号之间插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_opening_paren_in_enum_constant（insert/do_not_insert）
+	在enum常量中打开括号之前插入空格,默认值:DO_NOT_INSERT;
+alignment_for_superclass_in_type_declaration
+	用于在类型声明中对超类进行对齐;
+alignment_for_assignment
+	分配对齐;
+tabulation.char（TAB，空格，混合）
+	指定表格大小,默认为TAB；
+insert_space_after_comma_in_constructor_declaration_parameters（insert/do_not_insert）
+	用于在构造函数声明的参数中插入逗号后的空格,默认值:INSERT;
+insert_space_before_prefix_operator（insert/do_not_insert）
+	用于在前缀操作符之前插入空格,默认值:DO_NOT_INSERT;
+indent_statements_compare_to_body（TRUE, FALSE）
+	在方法或构造函数的主体内缩进语句的，默认为TRUE；
+blank_lines_before_method（其中n为零或正整数）
+	method1();\n,method2(); -> method1();(n+1)*'\n'method2();
+	用于在方法声明之前添加空行，默认值:“0”
+format_guardian_clause_on_one_line（TRUE, FALSE）
+	在一个行中保留保护条款，默认为FLASE；
+insert_space_before_colon_in_for（insert/do_not_insert）
+	用于在for语句的冒号之前插入空格,默认值:INSERT;
+insert_space_before_closing_paren_in_cast（insert/do_not_insert）
+	(int)var 要不要 (int )var
+	在转换表达式中关闭括号之前插入空格,默认值:DO_NOT_INSERT;
+alignment_for_parameters_in_constructor_declaration
+	构造函数声明中参数对齐;
+insert_space_after_colon_in_labeled_statement（insert/do_not_insert）
+	在冒号后插入一个标记语句中的空格,默认值:INSERT;
+brace_position_for_annotation_type_declaration（END_OF_LINE, NEXT_LINE, next_line_moved, NEXT_LINE_ON_WRAP）
+	用于定位注释类型声明的大括号,默认值:END_OF_LINE;
+insert_space_before_closing_paren_in_method_invocation（insert/do_not_insert）
+	call method(1) -> call method(1 )
+	在方法调用的结束括号之前插入一个空格,默认值:DO_NOT_INSERT;
+insert_new_line_in_empty_method_body（insert/do_not_insert）
+	在空方法体中插入新行,默认值:INSERT;
+insert_space_after_opening_bracket_in_array_allocation_expression（insert/do_not_insert）
+	new 後面的 type[n] 要不要 type[ n]
+	在数组分配表达式的左括号后面插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_opening_brace_in_enum_constant（insert/do_not_insert）
+	在enum中，在开环前插入一个空格,默认值:INSERT;
+insert_space_before_comma_in_annotation（insert/do_not_insert）
+	用于在注释中逗号前插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_at_in_annotation_type_declaration（insert/do_not_insert）
+	用于在注释类型声明之后插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_comma_in_method_declaration_throws（insert/do_not_insert）:在方法声明的throw子句的异常名称中，在逗号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_closing_paren_in_if（insert/do_not_insert）
+	if(true) -> if(true ) ?
+	在if语句的结束括号之前插入空格,默认值:DO_NOT_INSERT;
+brace_position_for_switch（END_OF_LINE, NEXT_LINE, next_line_shift, NEXT_LINE_ON_WRAP）
+	定位switch语句的大括号,默认为END_OF_LINE；
+insert_space_after_comma_in_method_declaration_throws（insert/do_not_insert）
+	在方法声明的抛出子句的异常名称中，在逗号之后插入空格,默认值:INSERT;
+insert_space_before_parenthesized_expression_in_return（insert/do_not_insert）
+	在返回语句中的括号表达式之前插入空格,默认值:INSERT;
+insert_space_before_opening_paren_in_annotation（insert/do_not_insert）
+	用于在注释中打开括号之前插入空格,默认值:INSERT;
+insert_space_after_question_in_conditional（insert/do_not_insert）
+	在条件表达式的问号后面插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_question_in_wildcard（insert/do_not_insert）
+	在通配符中问号后面插入空格，默认值:DO_NOT_INSERT；
+insert_space_before_closing_bracket_in_array_allocation_expression（insert/do_not_insert）
+	new 後面的 type[n] 要不要 type[n ]
+	在数组分配表达式中插入一个空格，默认值:DO_NOT_INSERT；
+insert_space_before_parenthesized_expression_in_throw（insert/do_not_insert）
+	在抛出语句中插入括号表达式之前的空格,默认值:INSERT;
+insert_space_before_comma_in_type_arguments（insert/do_not_insert）
+	用于在类型参数中在逗号之前插入空格，默认值:DO_NOT_INSERT；
+indent_switchstatements_compare_to_switch（TRUE, FALSE）
+	以缩进switch语句比较切换，默认为TRUE；
+insert_space_before_ellipsis（insert/do_not_insert）
+	在省略号之前插入空格，默认值:DO_NOT_INSERT；
+brace_position_for_block（END_OF_LINE, NEXT_LINE, NEXT_LINE_SHIFTED, NEXT_LINE_ON_WRAP）
+	定位块的括号，默认为END_OF_LINE；
+insert_space_before_comma_in_for_inits（insert/do_not_insert）
+	用于在for语句的初始化中，在逗号之前插入空格，默认值:DO_NOT_INSERT；
+brace_position_for_method_declaration（ END_OF_LINE, NEXT_LINE, NEXT_LINE_SHIFTED, NEXT_LINE_ON_WRAP）
+	用于定位方法声明的大括号，默认为END_OF_LINE；
+compact_else_if（TRUE, FALSE）
+	压缩else/if，默认为TRUE；
+insert_space_before_comma_in_array_initializer（insert/do_not_insert）
+	在逗号之前插入空格，默认值:DO_NOT_INSERT；
+insert_space_after_comma_in_for_increments（insert/do_not_insert）
+	在for语句的增量中，在逗号后面插入空格，默认值:INSERT；
+insert_space_before_closing_bracket_in_array_reference（insert/do_not_insert）
+	用于在数组引用的结束括号前插入空格，默认值:DO_NOT_INSERT；
+brace_position_for_enum_constant（END_OF_LINE, NEXT_LINE, next_line_shift, NEXT_LINE_ON_WRAP）
+	用于定位枚举常量的括号，默认为END_OF_LINE；
+comment.indent_root_tags（TRUE, FALSE）
+	控制Javadoc根标签是否缩进，默认为TRUE;
+insert_space_before_comma_in_enum_declarations（insert/do_not_insert）
+	在枚举声明中插入逗号前的空格，默认值:DO_NOT_INSERT；
+insert_space_after_comma_in_explicitconstructorcall_arguments（insert/do_not_insert）
+	用于在显式构造函数调用的参数中，在逗号之后插入空格，默认值:INSERT;
+insert_space_before_opening_brace_in_switch（insert/do_not_insert）
+	用于在开关语句的开始括号前插入空格，默认值:INSERT;
+insert_space_after_comma_in_superinterfaces（insert/do_not_insert）
+	在类型头的超接口名称中，在逗号之后插入空格，默认值:INSERT;
+insert_space_before_comma_in_method_declaration_parameters（insert/do_not_insert）
+	void method(int a,int b) 要不要 void method(int a ,int b)
+	在方法声明的参数中，在逗号之前插入空格，默认值:DO_NOT_INSERT；
+insert_space_before_comma_in_allocation_expression（insert/do_not_insert）
+	在分配表达式中插入一个空格，默认值:DO_NOT_INSERT；
+tabulation.size（其中n为0或为正整数）
+	指定表示一个表格的等效空格数,默认值:“4;
+insert_space_before_opening_bracket_in_array_type_reference（insert/do_not_insert）
+	用于在数组类型引用的左括号前插入空格,默认值:DO_NOT_INSERT;
+insert_new_line_after_opening_brace_in_array_initializer（insert/do_not_insert）
+	用于在数组初始化器的开始括号之后插入新行,默认值:DO_NOT_INSERT;
+insert_space_after_closing_brace_in_block（insert/do_not_insert）
+	在块的闭括号之后插入空格，默认值:INSERT;
+insert_space_before_opening_bracket_in_array_reference（insert/do_not_insert）
+	在数组引用的左括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_new_line_in_empty_enum_constant（insert/do_not_insert）
+	在空enum常量中插入新行，默认值:INSERT;
+insert_space_after_opening_angle_bracket_in_type_arguments（insert/do_not_insert）
+	用于在类型参数的开始角括号之后插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_opening_paren_in_constructor_declaration（insert/do_not_insert）
+	ctor() -> ctor ()
+	用于在构造函数声明中打开括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_opening_paren_in_if（insert/do_not_insert）
+	在if语句中打开括号后插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_comma_in_constructor_declaration_throws（insert/do_not_insert）
+	在构造函数声明的throw子句的异常名称中，在逗号之前插入空格,默认值:DO_NOT_INSERT;
+comment.clear_blank_lines_in_javadoc_comment（TRUE, FALSE）
+	用于控制在javadoc注释中是否清除空行,默认为FALSE;
+alignment_for_throws_clause_in_constructor_declaration
+	用于在构造函数声明中对齐抛出子句;
+insert_space_after_assignment_operator（insert/do_not_insert）
+	在赋值操作符之后插入空格，默认值:INSERT;
+insert_space_before_assignment_operator（insert/do_not_insert）
+	在赋值运算符之前插入空格，默认值:INSERT;
+indent_empty_lines（TRUE, FALSE）
+	缩进空行,默认为false;
+insert_space_after_opening_paren_in_synchronized（insert/do_not_insert）
+	在同步语句中打开括号后插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_closing_paren_in_cast（insert/do_not_insert）
+	(int)var -> (int) var
+	在转换表达式的结束括号之后插入空格，默认值:INSERT;
+insert_space_after_comma_in_method_declaration_parameters（insert/do_not_insert）
+	在方法声明的参数中插入逗号之后的空格，默认值:INSERT;
+brace_position_for_block_in_case（END_OF_LINE、NEXT_LINE、next_line_shift、NEXT_LINE_ON_WRAP）
+	当块是后面的第一个语句时，将块的大括号放在case语句中,默认值:END_OF_LINE;
+number_of_empty_lines_to_preserve（其中n为0或正整数）
+	指定要保存的空行数,默认值:"0";
+insert_space_before_opening_paren_in_method_declaration（insert/do_not_insert）
+	public void method(int x) 要不要 public void method (int x)
+	在方法声明中打开括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_opening_paren_in_catch（insert/do_not_insert）
+	在catch中开括号后插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_closing_paren_in_constructor_declaration（insert/do_not_insert）
+	ctor(int x) 要不要 ctor(int x )
+	用于在构造函数声明中关闭括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_opening_paren_in_method_invocation（insert/do_not_insert）
+	call method() 要不要 call method ()
+	在方法调用中打开括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_opening_bracket_in_array_reference（insert/do_not_insert）
+	在数组引用的左括号后面插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_and_in_type_parameter（insert/do_not_insert）
+	用于在wilcard后和中插入空格，默认值:INSERT;
+alignment_for_arguments_in_qualified_allocation_expression
+	用于在限定分配表达式中对齐参数;
+continuation_indentation_for_array_initializer（其中n为0或为正整数）
+	用于设置数组初始化器中的延续缩进,默认值:“2”;
+insert_space_between_empty_brackets_in_array_allocation_expression（insert/do_not_insert）
+	在数组分配表达式的空括号之间插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_at_in_annotation_type_declaration（insert/do_not_insert）
+	在注释类型声明之前插入空格，默认值:INSERT;
+alignment_for_arguments_in_allocation_expression
+	用于在分配表达式中对齐参数;
+insert_space_after_opening_paren_in_cast（insert/do_not_insert）
+	在转换表达式中打开括号后插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_unary_operator（insert/do_not_insert）
+	在一元运算符之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_closing_angle_bracket_in_parameterized_type_reference（insert/do_not_insert）
+	class<Templ> 要不要 class<Templ >
+	在参数化类型引用的结束角括号前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_opening_brace_in_anonymous_type_declaration（insert/do_not_insert）
+	用于在匿名类型声明中打开括号前插入空格，默认值:INSERT;
+keep_empty_array_initializer_on_one_line（TRUE, FALSE）
+	要保持空数组初始化器一行,默认值:FALSE;
+insert_new_line_in_empty_enum_declaration（insert/do_not_insert）
+	在空枚举声明中插入新行，默认值:INSERT;
+keep_imple_if_on_one_line（TRUE, FALSE）
+	用于在一行中保持简单的if语句,默认为FLASE;
+insert_space_before_comma_in_constructor_declaration_parameters（insert/do_not_insert）
+	用于在构造函数声明的参数中插入逗号前的空格,默认值:DO_NOT_INSERT;
+insert_space_after_closing_angle_bracket_in_type_parameters（insert/do_not_insert）
+	在类型参数的结束角括号之后插入空格,默认值:INSERT;
+insert_new_line_at_end_of_file_if_missing（insert/do_not_insert）
+	如果缺少的话，可以在当前文件的末尾插入新行,默认值:DO_NOT_INSERT;
+insert_space_after_colon_in_for（insert/do_not_insert）
+	在for语句中，在冒号后插入空格，默认值:INSERT;
+insert_space_before_colon_in_labeled_statement（insert/do_not_insert）
+	gotoLable: -> gotoLable :
+	在冒号之前插入一个标记语句的空格，默认值:INSERT;
+insert_space_before_comma_in_parameterized_type_reference（insert/do_not_insert）
+	class<int,int> -> class<int ,int>
+	在参数化类型引用中在逗号之前插入空格,默认值:DO_NOT_INSERT;
+alignment_for_superinterfaces_in_type_declaration
+	用于在类型声明中对超接口进行对齐;
+alignment_for_binary_expression
+	用于二进制表达式的对齐brace_position_for_enum_declaration{END_OF_LINE, NEXT_LINE, next_line_shift, NEXT_LINE_ON_WRAP} 
+	用于定位enum声明的大括号.默认值:END_OF_LINE;
+insert_space_before_closing_paren_in_while（insert/do_not_insert）
+	while(1) -> while(1 )
+	用于在while语句中结束括号之前插入空格,默认值:DO_NOT_INSERT;
+put_empty_statement_on_new_line（{TRUE, FALSE）
+	用于指定空语句是否应该位于一个新的行,默认:FALSE;
+insert_new_line_after_annotation_on_parameter（insert/do_not_insert）
+	在参数的注释之后插入新行,默认值:DO_NOT_INSERT;
+insert_space_after_opening_angle_bracket_in_type_parameters（insert/do_not_insert）
+	class<T> -> class< T>
+	在类型参数中，在开始角括号之后插入空格,默认值:DO_NOT_INSERT;
+insert_space_between_empty_parens_in_method_invocation（insert/do_not_insert）
+	call method() 要不要 call method( )
+	在方法调用的空括号之间插入空格,默认值:DO_NOT_INSERT;
+insert_new_line_before_while_in_do_statement（insert/do_not_insert）
+	在do语句之前插入新行,默认值:DO_NOT_INSERT;
+alignment_for_arguments_in_enum_constant
+	为了在enum常量中对齐参数。
+comment.format_javadoc_comments（TRUE, FALSE）
+	用于控制javadoc注释是否被格式化，默认为TRUE；
+comment.line_length（其中n为0或为正整数）
+	指定注释的行长度，默认值:“80”；
+blank_lines_between_import_groups（其中n为0或为正整数）
+	添加导入组之间的空行，默认值:“1”；
+insert_space_before_comma_in_enum_constant_arguments（insert/do_not_insert）
+	在enum常量的参数中，在逗号前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_semicolon（insert/do_not_insert）
+	在分号前插入空格,默认值:DO_NOT_INSERT;
+brace_position_for_constructor_declaration  { END_OF_LINE, NEXT_LINE, NEXT_LINE_SHIFTED, NEXT_LINE_ON_WRAP }
+	用于定位构造函数声明的大括号，默认值:END_OF_LINE；
+number_of_blank_lines_at_beginning_of_method_body（其中n为0或正整数）
+	在方法主体的开头添加空行，默认值:“0”；
+insert_space_before_colon_in_conditional（insert/do_not_insert）
+	(1)?1:2; -> ()1 :2;
+	用于在条件表达式的冒号前插入空格,默认值:INSERT;
+indent_body_declarations_compare_to_type_header（TRUE, FALSE）
+	将缩进体声明与它的封闭类型heade进行比较，默认为TRUE;
+insert_space_before_opening_paren_in_annotation_type_member_declaration（insert/do_not_insert）
+	在注释类型成员声明中打开括号之前插入空格,默认值:DO_NOT_INSERT;
+wrap_before_binary_operator（TRUE, FALSE）
+	在二进制运算符之前包装，默认为TRUE;
+indent_body_declarations_compare_to_enum_declaration_header（TRUE, FALSE）
+	与所附的enum声明头相比，缩进正文声明，默认为TRUE;
+blank_lines_between_type_declarations（其中n为0或为正整数）
+	在类型声明之间添加空白行,默认值:“0”;
+insert_space_before_closing_paren_in_synchronized（insert/do_not_insert）
+	在同步语句的结束括号之前插入空格,默认值:DO_NOT_INSERT;
+indent_statements_compare_to_block（TRUE, FALSE）
+	在块内缩进语句，默认为TRUE;
+alignment_for_superinterfaces_in_enum_declaration
+	用于枚举声明中的超接口对齐;
+insert_space_before_question_in_conditional（insert/do_not_insert）
+	在条件表达式的问号前插入空格,默认值:INSERT;
+insert_space_before_comma_in_multiple_field_declarations（insert/do_not_insert）
+	用于在多个字段声明中在逗号之前插入空格,默认值:DO_NOT_INSERT;
+alignment_for_compact_if
+	对于紧凑型if的对齐;
+insert_space_after_comma_in_for_inits（insert/do_not_insert）
+	用于在for语句的初始化中，在逗号之后插入空格,默认值:INSERT;
+indent_switchstatements_compare_to_cases（TRUE, FALSE）
+	对缩进开关语句进行比较，默认为TRUE;
+insert_space_after_comma_in_array_initializer（insert/do_not_insert）
+	在数组初始化器中插入逗号之后的空格,默认值:INSERT;
+insert_space_before_colon_in_default（insert/do_not_insert）
+	case default: -> case default :
+	用于在默认语句中冒号之前插入空格,默认值:INSERT;
+insert_space_before_and_in_type_parameter（insert/do_not_insert）
+	用于在通配符前面和里面插入空格,默认值:INSERT;
+insert_space_between_empty_parens_in_constructor_declaration（insert/do_not_insert）
+	在构造函数声明的空括号之间插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_colon_in_assert（insert/do_not_insert）
+	用于在assert语句中冒号之后插入空格,默认值:INSERT;
+blank_lines_before_imports（其中n为0或为正整数）
+	在导入声明之前添加空行,默认值:“0”;
+comment.format_html（TRUE, FALSE）
+	控制HTML标签是否被格式化，默认为TRUE;
+alignment_for_throws_clause_in_method_declaratio
+	用于方法声明中抛出子句的对齐;
+insert_space_before_closing_angle_bracket_in_type_parameters（insert/do_not_insert）
+	interface<T> -> interface<T >
+	用于在类型参数中的结束角括号前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_opening_bracket_in_array_allocation_expression（insert/do_not_insert）
+	new 後面的 type[n] 要不要 type [n]
+	用于在数组分配表达式的左括号前插入空格,默认值:DO_NOT_INSERT;
+insert_new_line_in_empty_anonymous_type_declaration（insert/do_not_insert）
+	在空的匿名类型声明中插入新行,默认值:INSERT;
+insert_space_after_colon_in_conditional（insert/do_not_insert）
+	在条件表达式的冒号后面插入空格,默认值:INSERT;
+insert_space_after_opening_angle_bracket_in_parameterized_type_reference（insert/do_not_insert）
+	class<Templ> 要不要 class< Templ>
+	在参数化类型引用的开始角括号之后插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_closing_paren_in_for（insert/do_not_insert）
+	for(...;++i) 要不要 for(...;++i )
+	在for语句的结束括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_postfix_operator（insert/do_not_insert）
+	在后缀操作符之前插入空格,默认值:DO_NOT_INSERT;
+comment.format_source_code（TRUE, FALSE）
+	用于控制代码片段是否在注释中格式化,默认为TRUE;
+insert_space_before_opening_paren_in_synchronized（insert/do_not_insert）
+	在同步语句中打开括号之前插入空格,默认值:INSERT;
+insert_space_after_comma_in_allocation_expression（insert/do_not_insert）
+	在分配表达式的逗号后面插入空格,默认值:INSERT;
+insert_space_after_comma_in_constructor_declaration_throws（insert/do_not_insert）
+	用于在构造函数声明的throw子句的异常名称后面插入一个空格,默认值:INSERT;
+alignment_for_parameters_in_method_declaration
+	方法声明中参数的对齐;
+insert_space_before_closing_brace_in_array_initializer（insert/do_not_insert）
+	用于在数组初始化器的闭括号前插入空格,默认值:DO_NOT_INSERT;
+use_tabs_only_for_leading_indentations（TRUE, FALSE）
+	用于对缩进和空格进行行包装,默认为FALSE;
+insert_new_line_after_annotation_on_member（insert/do_not_insert）
+	在成员的注释(包、类、方法、字段声明)之后插入新行,默认值:INSERT;
+comment.format_header（TRUE, FALSE）
+	控制Java源文件的头注释是否被格式化,默认为FALSE;
+comment.format_block_comments（TRUE, FALSE）
+	用于控制多行注释是否被格式化,默认为TRUE;
+insert_space_before_closing_paren_in_enum_constant（insert/do_not_insert）
+	在enum常量中关闭括号之前插入空格,默认值:DO_NOT_INSERT;
+alignment_for_enum_constants
+	对于枚举常数的对齐;
+insert_new_line_in_empty_block（insert/do_not_insert）
+	用于在空块中插入新行,默认值:INSERT;
+indent_body_declarations_compare_to_annotation_declaration_header（TRUE, FALSE）
+	将缩进主体声明与其所包含的注释声明头进行比较,默认为TRUE;
+insert_space_before_closing_paren_in_parenthesized_expression（insert/do_not_insert）
+	在圆括号中的圆括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_opening_paren_in_parenthesized_expression（insert/do_not_insert）
+	在括号内的括号前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_closing_paren_in_catch（insert/do_not_insert）
+	用于在catch - Option id中关闭括号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_comma_in_multiple_local_declarations（insert/do_not_insert）
+	用于在多个本地声明中在逗号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_opening_paren_in_switch（insert/do_not_insert）
+	用于在switch语句中打开括号之前插入空格,默认值:INSERT;
+insert_space_before_comma_in_for_increments（insert/do_not_insert）
+	用于在for语句的增量中在逗号之前插入空格,默认值:DO_NOT_INSERT;
+insert_space_after_opening_paren_in_method_invocation（insert/do_not_insert）
+	在方法调用中打开括号后插入空格,默认值:DO_NOT_INSERT;
+insert_space_before_colon_in_assert（insert/do_not_insert）
+	在assert语句中在冒号之前插入空格,默认值:INSERT;
+brace_position_for_type_declaration{ END_OF_LINE, NEXT_LINE, NEXT_LINE_SHIFTED, NEXT_LINE_ON_WRAP }
+	用于定位类型声明的大括号,默认值:END_OF_LINE
+insert_space_before_opening_brace_in_array_initializer（insert/do_not_insert）
+	在数组初始化器中插入一个空格前插入一个空格,默认值:DO_NOT_INSERT;
+insert_space_between_empty_braces_in_array_initializer（insert/do_not_insert）
+	在数组初始化器中插入空括号之间的空格,默认值:DO_NOT_INSERT;
+insert_space_after_opening_paren_in_method_declaration（insert/do_not_insert）
+	public void method(int x) 要不要 public void method( int x)
+	用于在方法声明中打开括号后插入空格,默认:DO_NOT_INSERT;
+insert_space_before_semicolon_in_for（insert/do_not_insert）
+	for(1;1;1) -> for(1 ;1 ;1)
+	在for语句中分号前插入空格,默认:DO_NOT_INSERT;
+insert_space_before_opening_paren_in_catch（insert/do_not_insert）
+	在catch中打开括号之前插入空格,默认值:INSERT;
+insert_space_before_opening_angle_bracket_in_parameterized_type_reference（insert/do_not_insert）
+	class<Templ> 要不要 class <Templ>
+	用于在参数化类型引用的开始角括号前插入空格,默认:DO_NOT_INSERT;
+insert_space_after_comma_in_multiple_field_declarations（insert/do_not_insert）
+	在多个字段声明中，在逗号后插入空格,默认值:INSERT;
+insert_space_before_closing_paren_in_annotation（insert/do_not_insert）
+	在注释中的结束括号之前插入空格,默认:DO_NOT_INSERT;
+insert_space_after_comma_in_parameterized_type_reference（insert/do_not_insert）
+	在参数化类型引用中，在逗号之后插入空格,默认值:INSERT;
+insert_space_after_comma_in_method_invocation_arguments（insert/do_not_insert）
+	在方法调用的参数中，在逗号之后插入空格,默认值:INSERT;
+blank_lines_after_imports（其中n为0或为正整数）
+	在导入声明之后添加空行,默认值:"0";
+insert_space_after_comma_in_multiple_local_declarations（insert/do_not_insert）
+	在多个本地声明中插入逗号之后的空格,默认值:INSERT;
+indent_body_declarations_compare_to_enum_constant_header（TRUE, FALSE）
+	对于缩进体声明，与它的封闭枚举常量标题比较,默认为TRUE;
+insert_space_after_semicolon_in_for（insert/do_not_insert）
+	用于在for语句中在分号之后插入空格,默认值:INSERT;
+never_indent_line_comments_on_first_column（TRUE, FALSE）
+	缩进从第一列开始的行注释,默认为FALSE;
+insert_space_before_opening_angle_bracket_in_type_arguments（insert/do_not_insert）
+	用于在类型参数的开始角括号前插入空格,默认:DO_NOT_INSERT;
+never_indent_block_comments_on_first_column（TRUE, FALSE）
+	对从第一列开始的注释进行缩进,默认为FALSE;
+keep_then_statement_on_same_line（TRUE, FALSE）
+	将语句保持在同一直线上,默认为FALSE;
+insert_space_before_closing_paren_in_try
+	try(e) -> try(e )

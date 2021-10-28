@@ -1,0 +1,5 @@
+sh /home/freshliver/Dropbox/Backup/Linux/System/DownloadUploadSpeed.sh 1
+sh /home/freshliver/Dropbox/Backup/Linux/System/CPUUsage.sh 1
+sh /home/freshliver/Dropbox/Backup/Linux/System/CPUTemperature.sh 2
+sh /home/freshliver/Dropbox/Backup/Linux/System/KeyboardLockState.sh 1
+sh /home/freshliver/Dropbox/Backup/Linux/System/MemUsage.sh 1

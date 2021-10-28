@@ -1,0 +1,29 @@
+BTEarPhoneConnect
+echo "connect A8:99:DC:21:60:5B" | bluetoothctl
+
+BTEarPhoneDisconnect
+echo "disconnect" | bluetoothctl
+
+KillTelegram
+pkill Telegram
+
+LightDown
+qdbus org.kde.Solid.PowerManagement /org/kde/Solid/PowerManagement/Actions/BrightnessControl org.kde.Solid.PowerManagement.Actions.BrightnessControl.setBrightness $(expr $(qdbus org.kde.Solid.PowerManagement /org/kde/Solid/PowerManagement/Actions/BrightnessControl org.kde.Solid.PowerManagement.Actions.BrightnessControl.brightness) - 375)
+
+LightUp
+qdbus org.kde.Solid.PowerManagement /org/kde/Solid/PowerManagement/Actions/BrightnessControl org.kde.Solid.PowerManagement.Actions.BrightnessControl.setBrightness $(expr $(qdbus org.kde.Solid.PowerManagement /org/kde/Solid/PowerManagement/Actions/BrightnessControl org.kde.Solid.PowerManagement.Actions.BrightnessControl.brightness) + 375)
+
+ScreenOff
+xset dpms force off
+
+ScreenOn
+xset dpms force on
+
+ToggleMute
+qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mute"
+
+VolumeDown
+qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "decrease_volume"
+
+VolumeUp
+qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
