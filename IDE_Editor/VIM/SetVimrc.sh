@@ -3,10 +3,10 @@
 # mkdirs
 mkdir ~/.vim/
 mkdir ~/.vim/bundle
-mkdir ~/.vim/color
+mkdir ~/.vim/colors
 
 # link(overwrite) vimrc and color theme file
-ln -srf ./jummidark.vim ~/.vim/color/jummidark.vim
+ln -srf ./jummidark.vim ~/.vim/colors/jummidark.vim
 ln -srf ./vimrc.k21 ~/.vimrc
 
 # go to vim plugins
