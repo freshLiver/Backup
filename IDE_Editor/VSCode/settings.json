@@ -27,7 +27,7 @@
         "**/*.exe": true,
         "**/*.rar": true,
         "**/*.zip": true,
-        "**/*.pdf": true,
+        "**/*.pdf": false,
         "**/*.doc": true,
         "**/*.ppt": true,
         "**/*.xlxs": true,
@@ -43,6 +43,7 @@
     "update.showReleaseNotes": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     //
+    "workbench.action.debug.selectandstart": true,
     "workbench.sideBar.location": "right",
     "workbench.startupEditor": "newUntitledFile",
     // icon/color scheme
@@ -249,9 +250,12 @@
     },
     "cSpell.userWords": [
         "Cloudant",
+        "CSIE",
+        "CVPR",
         "hsi",
         "jsonify",
         "markdownify",
+        "NCKU",
         "textbox",
         "youtube"
     ],
@@ -267,7 +271,9 @@
     },
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
+    "security.workspace.trust.untrustedFiles": "open",
+    "latex-workshop.view.pdf.viewer": "tab",
     // 
     // 
     // 
