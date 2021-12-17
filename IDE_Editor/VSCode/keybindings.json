@@ -47,5 +47,10 @@
     {
         "key": "ctrl+f12",
         "command": "editor.action.peekDefinition"
+    },
+    {
+        "key": "f3",
+        "command": "notebook.format",
+        "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
     }
 ]

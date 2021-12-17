@@ -251,6 +251,7 @@
     "cSpell.userWords": [
         "Cloudant",
         "CSIE",
+        "cuda",
         "CVPR",
         "hsi",
         "jsonify",
@@ -271,9 +272,17 @@
     },
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
-    "window.zoomLevel": 2,
     "security.workspace.trust.untrustedFiles": "open",
     "latex-workshop.view.pdf.viewer": "tab",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "cSpell.enableFiletypes": [
+        "shellscript"
+    ],
+    "notebook.lineNumbers": "on",
+    "notebook.output.textLineLimit": 50,
+    "window.zoomLevel": 1,
     // 
     // 
     // 
