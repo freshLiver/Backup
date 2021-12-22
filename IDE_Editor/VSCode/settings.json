@@ -37,7 +37,6 @@
     // terminal setting
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontSize": 15,
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
     // vscode update 
     "update.mode": "manual",
     "update.showReleaseNotes": false,
@@ -146,23 +145,24 @@
     // * Spell Check
     "cSpell.spellCheckDelayMs": 500,
     // * bracket 
-    "bracketPairColorizer.forceUniqueOpeningColor": true,
-    "bracketPairColorizer.highlightActiveScope": true,
-    "bracketPairColorizer.rulerPosition": "Center",
-    "bracketPairColorizer.excludedLanguages": [],
-    "bracketPairColorizer.showHorizontalScopeLine": false,
-    "bracketPairColorizer.timeOut": 100,
-    "bracketPairColorizer.activeScopeCSS": [
-        "borderStyle : solid",
-        "borderWidth : 0px",
-        "borderColor : white; opacity: 0.2",
-        "backgroundColor: white",
-    ],
-    "bracketPairColorizer.scopeLineCSS": [
-        "borderStyle : solid",
-        "borderWidth : 0px",
-        "borderColor : white; opacity: 0.7",
-    ],
+    "editor.bracketPairColorization.enabled": true,
+    // "bracketPairColorizer.forceUniqueOpeningColor": true,
+    // "bracketPairColorizer.highlightActiveScope": true,
+    // "bracketPairColorizer.rulerPosition": "Center",
+    // "bracketPairColorizer.excludedLanguages": [],
+    // "bracketPairColorizer.showHorizontalScopeLine": false,
+    // "bracketPairColorizer.timeOut": 100,
+    // "bracketPairColorizer.activeScopeCSS": [
+    //     "borderStyle : solid",
+    //     "borderWidth : 0px",
+    //     "borderColor : white; opacity: 0.2",
+    //     "backgroundColor: white",
+    // ],
+    // "bracketPairColorizer.scopeLineCSS": [
+    //     "borderStyle : solid",
+    //     "borderWidth : 0px",
+    //     "borderColor : white; opacity: 0.7",
+    // ],
     // * TODO TREE
     "todo-tree.tree.showScanModeButton": false,
     "todo-tree.highlights.highlightDelay": 50,
@@ -218,6 +218,11 @@
     *******************************************************************************/
     "python.formatting.provider": "autopep8",
     "python.analysis.cacheFolderPath": "/tmp",
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "130",
+        "--experimental"
+    ],
     // 
     // 
     // 
@@ -281,8 +286,9 @@
         "shellscript"
     ],
     "notebook.lineNumbers": "on",
-    "notebook.output.textLineLimit": 50,
     "window.zoomLevel": 1,
+    "cSpell.allowCompoundWords": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
     // 
     // 
     // 

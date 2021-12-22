@@ -53,4 +53,18 @@
         "key": "ctrl+f12",
         "command": "editor.action.peekDefinition"
     },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
 ]
