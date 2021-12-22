@@ -104,6 +104,7 @@ apt install $YES \
     libssl-dev \
     libreadline-dev \
     libffi-dev \
+    libbz2-dev \
     wget
 
 # tkinter dependency
