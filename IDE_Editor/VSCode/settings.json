@@ -82,7 +82,7 @@
         /* terminal 等 panel 的相關顏色 */
         // "terminal.background": "#3b3d3d",
         "terminal.foreground": "#07c300",
-        "panel.border": "#ec5fff",
+        "panel.border": "#e838ff",
         "panelTitle.activeBorder": "#00ff6a",
         "panelTitle.activeForeground": "#00ff6ade",
         "panelTitle.inactiveForeground": "#b68fbb",
@@ -221,7 +221,7 @@
     "python.formatting.autopep8Args": [
         "--max-line-length",
         "130",
-        "--experimental"
+        "--experimental",
     ],
     // 
     // 
@@ -262,6 +262,7 @@
         "jsonify",
         "markdownify",
         "NCKU",
+        "pyplot",
         "textbox",
         "youtube"
     ],
@@ -286,7 +287,6 @@
         "shellscript"
     ],
     "notebook.lineNumbers": "on",
-    "window.zoomLevel": 1,
     "cSpell.allowCompoundWords": true,
     "python.terminal.activateEnvInCurrentTerminal": true,
     // 
