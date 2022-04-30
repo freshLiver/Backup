@@ -75,4 +75,27 @@
         "key": "alt+b",
         "command": "workbench.action.toggleSidebarVisibility"
     },
+    {
+        "key": "ctrl+shift+/",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f5",
+        "command": "latex-workshop.build",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /latex|rsweave|jlweave/"
+    },
+    {
+        "key": "ctrl+shift+f9",
+        "command": "workbench.debug.viewlet.action.toggleBreakpointsActivatedAction"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
 ]

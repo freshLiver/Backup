@@ -12,10 +12,11 @@
     // font settings
     "editor.fontSize": 16,
     "editor.formatOnSave": true,
-    "editor.fontFamily": "'JetBrains Mono', 'Ubuntu Mono', monospace",
+    "editor.fontFamily": "'JetBrains Mono', 'FiraCode Nerd Font Mono', 'Ubuntu Mono', monospace",
     "editor.fontLigatures": true,
     // indent 
     "editor.wordWrap": "on",
+    "editor.inlayHints.enabled": true,
     "editor.wrappingIndent": "indent",
     "editor.renderIndentGuides": true,
     // auto save 
@@ -27,6 +28,7 @@
         "**/*.exe": true,
         "**/*.rar": true,
         "**/*.zip": true,
+        "**/*.7z": true,
         "**/*.pdf": false,
         "**/*.doc": true,
         "**/*.ppt": true,
@@ -36,14 +38,13 @@
     },
     // terminal setting
     "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontSize": 16,
     // vscode update 
     "update.mode": "manual",
     "update.showReleaseNotes": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     //
     "workbench.action.debug.selectandstart": true,
-    "workbench.sideBar.location": "right",
     "workbench.startupEditor": "newUntitledFile",
     // icon/color scheme
     "workbench.iconTheme": "material-icon-theme",
@@ -81,7 +82,7 @@
         "tab.unfocusedActiveBackground": "#423f3f32",
         /* terminal 等 panel 的相關顏色 */
         // "terminal.background": "#3b3d3d",
-        "terminal.foreground": "#07c300",
+        // "terminal.foreground": "#07c300",
         "panel.border": "#e838ff",
         "panelTitle.activeBorder": "#00ff6a",
         "panelTitle.activeForeground": "#00ff6ade",
@@ -167,7 +168,7 @@
     "todo-tree.tree.showScanModeButton": false,
     "todo-tree.highlights.highlightDelay": 50,
     "todo-tree.highlights.defaultHighlight": {
-        "icon": "check-circle",
+        "icon": "check",
         "type": "whole-line",
         "foreground": "#c9c9c9",
         "background": "#c6d100",
@@ -175,24 +176,50 @@
         "iconColour": "#c6d100",
         "rulerColour": "#FFFF00",
     },
+    "todo-tree.highlights.customHighlight": {
+        "BUG": {
+            "icon": "bug",
+            "type": "whole-line",
+            "foreground": "#c9c9c9",
+            "background": "#17d66a",
+            "rulerColour": "#17d66a",
+            "iconColour": "#17d66a"
+        },
+        "FIXME": {
+            "icon": "flame",
+            "type": "whole-line",
+            "foreground": "#c9c9c9",
+            "background": "#d6174d",
+            "rulerColour": "#d6174d",
+            "iconColour": "#d6174d"
+        },
+        "TESTING": {
+            "icon": "beaker",
+            "type": "whole-line",
+            "foreground": "#c9c9c9",
+            "background": "#17c6d6",
+            "rulerColour": "#17c6d6",
+            "iconColour": "#17c6d6"
+        }
+    },
     "todo-tree.general.tags": [
         "TODO",
         "FIXME",
-        "TEST!"
+        "TESTING",
+        "BUG"
     ],
     // * rainbow indent color setting
-    "indentRainbow.errorColor": "#FF4C6D50",
-    "indentRainbow.colors": [
-        "#29677740",
-        "#5acbff25",
-        "#528f9e30",
-    ],
+    // "indentRainbow.errorColor": "#FF4C6D50",
+    // "indentRainbow.colors": [
+    //     "#29677740",
+    //     "#5acbff25",
+    //     "#528f9e30",
+    // ],
     "C_Cpp.default.includePath": [
-        "${default}",
-        "/usr/include/mpi"
+        "${default}"
     ],
     // c/cpp code format
-    "C_Cpp.clang_format_path": "clang-format-4.0",
+    "C_Cpp.clang_format_path": "clang-format",
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
@@ -223,6 +250,14 @@
         "130",
         "--experimental",
     ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "notebook.lineNumbers": "on",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     // 
     // 
     // 
@@ -246,13 +281,16 @@
     "[verilog]": {
         "editor.defaultFormatter": "ericsonj.verilogformat"
     },
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "terminal.integrated.tabs.location": "left",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    },
+    "terminal.integrated.tabs.location": "left",
     "cSpell.userWords": [
         "Cloudant",
         "CSIE",
@@ -263,32 +301,33 @@
         "markdownify",
         "NCKU",
         "pyplot",
+        "strdupf",
         "textbox",
         "youtube"
     ],
     "emmet.includeLanguages": {
         "liquid": "html"
     },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
     "explorer.autoReveal": false,
-    "[css]": {
-        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-    },
     "editor.minimap.enabled": false,
-    "editor.lineNumbers": "relative",
     "security.workspace.trust.untrustedFiles": "open",
     "latex-workshop.view.pdf.viewer": "tab",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
     "cSpell.enableFiletypes": [
         "shellscript"
     ],
-    "notebook.lineNumbers": "on",
     "cSpell.allowCompoundWords": true,
-    "python.terminal.activateEnvInCurrentTerminal": true,
+    "search.showLineNumbers": true,
+    "C_Cpp.default.cppStandard": "c++14",
+    "C_Cpp.default.cStandard": "c11",
+    "latex-workshop.bibtex-format.tab": "4 spaces",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hant": true
+    },
+    "pasteImage.basePath": "${currentFileDir}/imgs",
+    "workbench.sideBar.location": "right",
+    "python.venvPath": "~/venv/",
+    "window.zoomLevel": 1,
     // 
     // 
     // 

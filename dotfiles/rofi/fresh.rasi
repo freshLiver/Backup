@@ -1,0 +1,189 @@
+/**
+ * freshLiver's custom theme base on lb by Qball
+ * 
+ * Original Color theme info : 
+ *
+ * ROFI Color theme
+ * User: Qball
+ * Copyright: Dave Davenport
+ */
+
+* {
+    /* common colors */
+    red:                         rgba ( 220,  50,  47, 100 % );
+    blue:                        rgba (  38, 139, 210, 100 % );
+    active:                      rgba ( 170, 170,  17, 100 % );   
+    alternate:                   rgba ( 255, 255, 255,   7 % );
+    urgent:                      rgba ( 255, 153, 153, 100 % );
+    transprent:                  rgba (   0,   0,   0,   0 % );
+
+    /* base colors */
+    lightfg:                     rgba (  88, 104, 117, 100 % );
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+
+    foreground:                  rgba (  17, 170, 170, 100 % );
+    background:                  rgba (  51,  51,  51,  95 % );
+
+    background-color:            @transprent;
+    border-color:                @foreground;
+
+    normal-foreground:           @foreground;
+    normal-background:           @transprent;
+    active-foreground:           @active;
+    active-background:           @normal-background;
+    urgent-foreground:           @urgent;
+    urgent-background:           @normal-background;
+
+    /* selected colors */
+    selected-normal-foreground:  @background;
+    selected-normal-background:  @foreground;
+    selected-active-foreground:  @background;
+    selected-active-background:  @active-foreground;
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @urgent-foreground;
+
+    /* alternate colors */
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @alternate;
+    alternate-active-foreground: @active-foreground;
+    alternate-active-background: @alternate;
+    alternate-urgent-foreground: @urgent-foreground;
+    alternate-urgent-background: @alternate;
+}
+
+
+
+/* global config */
+#window {
+    background-color: @background;
+    border:           4px;
+    padding:          8px;
+    border-radius:    32px;
+}
+#mainbox {
+    border:     0;
+    padding:    0;
+    spacing:    0px;
+    children:   [ inputbar, listview, mode-switcher ];
+}
+#scrollbar {
+    width:          0px;
+    border:         0px solid 0px 0px;
+    handle-width:   8px;
+    handle-color:   @foreground;
+}
+
+/* inputbar related */
+
+#inputbar {
+    spacing:    8px;
+    text-color: @normal-foreground;
+    padding:    4px;
+    margin:     8px;
+    border:     0px solid 0px 4px;
+    children:   [ prompt, textbox-prompt-symbol, entry, case-indicator ];
+}
+#prompt {
+    spacing:    0;
+    expand:     false;
+    text-color: @normal-foreground;
+}
+#textbox-prompt-symbol {
+    expand:     false;
+    str:        "";
+    margin:     0px 0px 0px 0px;
+    text-color: @normal-foreground;
+}
+#entry {
+    spacing:    0;
+    expand:     true;
+    text-color: @normal-foreground;
+}
+#case-indicator {
+    spacing:    0px;
+    text-color: @normal-foreground;
+}
+
+/* message related */
+
+#message {
+    border:       1px dash 0px 0px ;
+    padding:      40px ;
+}
+#textbox {
+    text-color: @foreground;
+}
+
+/* listview related */
+
+#listview {
+    fixed-height:   0;
+    border:         0px solid 0px 0px ;
+    border-radius:  0;
+    spacing:        4px ;
+    scrollbar:      true;
+    padding:        2px 0px 0px ;
+    margin:         8px;
+}
+#element {
+    border:         0px;
+    border-radius:  8px;
+    padding:        4px;
+    margin:         2px;
+    spacing:        20px;
+}
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+#element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+#element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+/* mode-switcher related */
+
+#mode-switcher {
+    margin:             8px;
+    border:             4px solid 0px 0px;
+    border-color:       @separatorcolor;
+}
+#button {
+    border-radius:      32px;
+    margin:             8px 0px 0px 0px;
+    padding:            4px 0px;
+    text-color:         @normal-foreground;
+    background-color:   @normal-background;
+}
+#button.selected {
+    background-color:   @selected-normal-background;
+    text-color:         @selected-normal-foreground;
+}

@@ -24,5 +24,6 @@
     <binding command="MonoDevelop.Ide.Commands.EditCommands.ToggleFolding" shortcut="Control+Shift+M Control+Caps_Lock" />
     <binding command="MonoDevelop.Ide.Commands.EditCommands.ToggleCodeComment" shortcut="Control+Alt+C Control+/" />
     <binding command="MonoDevelop.Ide.CodeFormatting.CodeFormattingCommands.FormatBuffer" shortcut="Alt+Shift+F F3" />
+    <binding command="MonoDevelop.Ide.Commands.TextEditorCommands.ShowCompletionWindow" shortcut="" />
   </scheme>
 </schemes>
