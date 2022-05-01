@@ -10,13 +10,20 @@
 
 * {
     /* base colors */
-    active:                      rgba(255, 143, 223, 1.00);   
-    alternate:                   rgba(255, 183, 197, 0.07);
-    urgent:                      rgba(254,  75, 116, 1.00);
+    miko1:                       rgba(254,  75, 116, 1.00);
+    miko2:                       rgba(255, 143, 223, 1.00);   
+    miko3:                       rgba(255, 156, 180, 1.00);
+    sakura:                      rgba(255, 183, 197, 0.07);
+
+    dark:                        rgba( 33,  39,  56, 0.95);
     transprent:                  rgba(  0,   0,   0, 0.00);
 
-    foreground:                  rgba(255, 156, 180, 1.00);
-    background:                  rgba( 33,  39,  56, 0.95);
+    active:                      @miko3;
+    urgent:                      @miko2;
+    alternate:                   @sakura;
+
+    foreground:                  @miko1;
+    background:                  @dark;
 
     background-color:            @transprent;
     border-color:                @foreground;
