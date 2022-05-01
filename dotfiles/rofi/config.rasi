@@ -1,6 +1,6 @@
 configuration {
 	modi: "drun,window,combi,windowcd,run,keys";
-/*	width: 50;*/
+	width: 65;
 	lines: 12;
 /*	columns: 1;*/
 	font: "JetBrainsMono Nerd Font Mono bold 12";
