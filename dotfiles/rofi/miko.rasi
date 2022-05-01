@@ -1,5 +1,5 @@
 /**
- * freshLiver's custom theme base on lb by Qball
+ * freshLiver's custom miko theme base on lb by Qball
  * 
  * Original Color theme info : 
  *
@@ -9,20 +9,14 @@
  */
 
 * {
-    /* common colors */
-    red:                         rgba ( 220,  50,  47, 100 % );
-    blue:                        rgba (  38, 139, 210, 100 % );
-    active:                      rgba ( 170, 170,  17, 100 % );   
-    alternate:                   rgba ( 255, 255, 255,   7 % );
-    urgent:                      rgba ( 255, 153, 153, 100 % );
-    transprent:                  rgba (   0,   0,   0,   0 % );
-
     /* base colors */
-    lightfg:                     rgba (  88, 104, 117, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    active:                      rgba(255, 143, 223, 1.00);   
+    alternate:                   rgba(255, 183, 197, 0.07);
+    urgent:                      rgba(254,  75, 116, 1.00);
+    transprent:                  rgba(  0,   0,   0, 0.00);
 
-    foreground:                  rgba (  17, 170, 170, 100 % );
-    background:                  rgba (  51,  51,  51,  93 % );
+    foreground:                  rgba(255, 156, 180, 1.00);
+    background:                  rgba( 33,  39,  56, 0.95);
 
     background-color:            @transprent;
     border-color:                @foreground;

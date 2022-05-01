@@ -53,7 +53,7 @@ configuration {
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "fresh";
+	theme: "miko";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
@@ -144,5 +144,5 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 
-@import "fresh.rasi"
-@theme "fresh"
+@import "miko.rasi"
+@theme "miko"
