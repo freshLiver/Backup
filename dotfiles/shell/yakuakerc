@@ -1,0 +1,10 @@
+[Desktop Entry]
+DefaultProfile=KonsoleConfig.profile
+
+[Dialogs]
+FirstRun=false
+
+[Window]
+DynamicTabTitles=true
+Height=86
+ShowSystrayIcon=false

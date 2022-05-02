@@ -6,12 +6,18 @@ mkdir -p "$HOME_CONFIG"
 ln -srf ./shell/.tmux.conf "$HOME/.tmux.conf"
 
 
+
 # zsh -- .zshrc and .oh-my-zsh/themes/theme.zsh-theme
 ZSH_TEHEM_DIR="$HOME/.oh-my-zsh/themes"
 mkdir -p "$ZSH_TEHEM_DIR"
 
 ln -srf ./shell/zsh/.zshrc "$HOME/.zshrc"
 ln -srf ./shell/zsh/mytheme.zsh-theme "$ZSH_TEHEM_DIR"
+
+
+
+# yakuake -- .config/yakuakerc
+ln -srf ./shell/yakuakerc "$HOME_CONFIG"
 
 
 # vim -- .vimrc and .vim/colors
