@@ -7,7 +7,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" rgb color hint
+" color hint
 Plugin 'lilydjwg/colorizer'
 
 " indent line settings 

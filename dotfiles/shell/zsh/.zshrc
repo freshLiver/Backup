@@ -3,19 +3,16 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/freshliver/.oh-my-zsh"
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="juanghurtado"
+ZSH_THEME="mytheme"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -36,7 +33,7 @@ ZSH_THEME="juanghurtado"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -48,6 +45,8 @@ ZSH_THEME="juanghurtado"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -67,13 +66,12 @@ ZSH_THEME="juanghurtado"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(git zsh-autosuggestions)
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+# plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -101,31 +99,23 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias ZSHreload="source /home/freshliver/.zshrc"
-
 alias cls="clear"
-alias doc="cd /home/freshliver/文件"
-alias dl="cd /home/freshliver/下載"
-alias cd..="cd .."
-alias prog="/home/freshliver/Dropbox/Programming"
-alias UGD="/home/freshliver/Ubuntu_GD"
-alias hws="/home/freshliver/Dropbox/HWs"
+alias aws='docker run -it amazon/aws-cli'
+alias twspace="sh ~/Dropbox/Side/Twitter/AutoTwSpace/tw-space-dl.sh"
+alias yt="~/Softwares/yt-dlp"
 
-alias vimrc="vim /home/freshliver/.vimrc"
-alias zshrc="vim /home/freshliver/.zshrc"
-alias TODO="vim /home/freshliver/Dropbox/TODO.md"
-alias ind="/home/freshliver/Dropbox/Programming/python/IndStudy/"
-alias python3="python3.8"
-alias venv37="source /usr/local/lib/py372/bin/activate"
-# tmp 
+# zsh-bd, git zsh-autosuggestions zsh-syntax-highlighting
+. $HOME/.oh-my-zsh/plugins/git/git.plugin.zsh
+. $HOME/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+. $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+. $HOME/.zsh/plugins/bd/bd.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-# restart wifi 
-alias WifiRestart="nmcli radio wifi off;nmcli radio wifi on"
-
-# neofetch
-alias neofetch="neofetch"
-
-# jupyter notebook
-alias jn="cd /home/freshliver/Dropbox/Programming/python/ && jupyter notebook"
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+export OVPN_DATA="ovpn-data"
