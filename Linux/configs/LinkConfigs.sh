@@ -18,10 +18,14 @@ ln -srf ./shell/zsh/.zshrc "$HOME/.zshrc"
 ln -srf ./shell/zsh/mytheme.zsh-theme "$ZSH_TEHEM_DIR"
 
 # yakuake -- .config/yakuakerc
-ln -srf ./shell/yakuakerc "$HOME_CONFIG"
+ln -srf ./shell/yakuakerc "$HOME_LOCAL_SHARE"
 
+# konsole -- .profile and colorscheme
+KONSOLE_CONFIG_DIR="$HOME_LOCAL_SHARE/konsole"
+mkdir -p "$KONSOLE_CONFIG_DIR"
 
-
+ln -srf ./shell/konsole/Breeze.colorscheme "$KONSOLE_CONFIG_DIR"
+ln -srf ./shell/konsole/KonsoleConfig.profile "$KONSOLE_CONFIG_DIR"
 
 
 # vim -- .vimrc and .vim/colors
@@ -48,6 +52,17 @@ POLYBAR_CONFIG_DIR="$HOME_CONFIG/polybar"
 mkdir -p "$POLYBAR_CONFIG_DIR"
 
 ln -srf ./polybar/miko.ini "$POLYBAR_CONFIG_DIR/config.ini"
+
+
+
+# latte-dock -- copy .layout.latte only, DON'T symlink it
+LATTE_CONFIG_DIR="$HOME_CONFIG/latte"
+mkdir -p "$LATTE_CONFIG_DIR"
+
+cp -f ./latte/K21.layout.latte "$LATTE_CONFIG_DIR/K21.layout.latte"
+cp -f ./latte/K21NB.layout.latte "$LATTE_CONFIG_DIR/K21NB.layout.latte"
+
+echo "Please restart latte-dock and change layout"
 
 
 
