@@ -185,11 +185,20 @@ set statusline+=%#CurrLine#[行：%c\ ,列：%l/%L]%3p%%\
 :nnoremap <End> $i<Right>
 
 "" move mapping
+:inoremap <C-K> <Esc>:m -2<CR>i
+:nnoremap <C-K> <Esc>:m -2<CR>:echo "Move Up"<CR>
+:vnoremap <C-K> :m '<-2<CR>gv
+
+:inoremap <C-J> <Esc>:m +1<CR>i
+:nnoremap <C-J> <Esc>:m +1<CR>:echo "Move Down"<CR>
+:vnoremap <C-J> :m '>+1<CR>gv
+
 :inoremap <A-Up> <Esc>:m -2<CR>i
-:inoremap <A-Down> <Esc>:m +1<CR>i
 :nnoremap <A-Up> <Esc>:m -2<CR>:echo "Move Up"<CR>
-:nnoremap <A-Down> <Esc>:m +1<CR>:echo "Move Down"<CR>
 :vnoremap <A-Up> :m '<-2<CR>gv
+
+:inoremap <A-Down> <Esc>:m +1<CR>i
+:nnoremap <A-Down> <Esc>:m +1<CR>:echo "Move Down"<CR>
 :vnoremap <A-Down> :m '>+1<CR>gv
 
 "" indent mapping
