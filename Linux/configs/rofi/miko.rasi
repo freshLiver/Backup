@@ -19,18 +19,18 @@
     light:                       rgba(230, 232, 230, 0.98);
     transprent:                  rgba(  0,   0,   0, 0.00);
 
-    active:                      @miko2;
-    urgent:                      @miko1;
-    alternate:                   @transprent;
-
     foreground:                  @miko3;
     background:                  @dark;
 
     background-color:            @transprent;
     border-color:                @foreground;
 
+    active:                      @miko2;
+    urgent:                      @miko1;
+    alternate:                   @transprent;
+
     normal-foreground:           @foreground;
-    normal-background:           @background;
+    normal-background:           @transprent;
     active-foreground:           @active;
     active-background:           @normal-background;
     urgent-foreground:           @urgent;
