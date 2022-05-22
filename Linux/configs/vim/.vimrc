@@ -100,6 +100,7 @@ hi LineNr cterm=None ctermbg=239 ctermfg=220
 hi CursorLineNr cterm=Bold ctermbg=34 ctermfg=193
 
 set number                           "" Show line numbers
+set relativenumber                   "" hybrid linenumber
 set wrap
 set linebreak                        "" Break lines at word (requires Wrap lines)
 set showbreak=➤                      "" Wrap-broken line prefix
