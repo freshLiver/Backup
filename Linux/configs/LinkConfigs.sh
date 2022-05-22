@@ -73,5 +73,8 @@ ln -nsrf ./rofi/ "$HOME_CONFIG"
 
 
 
+# deadbeef
+ln -nsrf ./deadbeef/ "$HOME_CONFIG"
+
 # mpv -- whole directory
 ln -nsrf ./mpv/ "$HOME_CONFIG"
