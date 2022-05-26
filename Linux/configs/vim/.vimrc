@@ -39,7 +39,6 @@ nnoremap <F4> :NERDTreeToggle<CR>
 " minimap 
 Plugin 'severin-lemaignan/vim-minimap'
 let g:minimap_toggle='<C-F11>'
-
 " autocompletion
 
 """ clang
@@ -146,7 +145,7 @@ set statusline+=%#FileInfo#\ %y%r\
 
 
 hi CurrLine cterm=none ctermbg=240 ctermfg=172
-set statusline+=%#CurrLine#[行：%c\ ,列：%l/%L]%3p%%\ 
+set statusline+=%#CurrLine#[%3p%%\ %c:%l/%L]
 
 
 """" AutoComplete 
@@ -185,7 +184,10 @@ set statusline+=%#CurrLine#[行：%c\ ,列：%l/%L]%3p%%\
 
 :nnoremap <End> $i<Right>
 
-"" move mapping
+
+
+
+"" mappings for line moving
 :inoremap <C-K> <Esc>:m -2<CR>i
 :nnoremap <C-K> <Esc>:m -2<CR>:echo "Move Up"<CR>
 :vnoremap <C-K> :m '<-2<CR>gv
@@ -194,19 +196,22 @@ set statusline+=%#CurrLine#[行：%c\ ,列：%l/%L]%3p%%\
 :nnoremap <C-J> <Esc>:m +1<CR>:echo "Move Down"<CR>
 :vnoremap <C-J> :m '>+1<CR>gv
 
-:inoremap <A-Up> <Esc>:m -2<CR>i
-:nnoremap <A-Up> <Esc>:m -2<CR>:echo "Move Up"<CR>
-:vnoremap <A-Up> :m '<-2<CR>gv
+" mappings for window navigations
+:nnoremap <S-H> :wincmd h<CR>
+:nnoremap <S-J> :wincmd j<CR>
+:nnoremap <S-K> :wincmd k<CR>
+:nnoremap <S-L> :wincmd l<CR>
 
-:inoremap <A-Down> <Esc>:m +1<CR>i
-:nnoremap <A-Down> <Esc>:m +1<CR>:echo "Move Down"<CR>
-:vnoremap <A-Down> :m '>+1<CR>gv
 
-"" indent mapping
+
+
+"" mappings for indent
 :nnoremap <Tab> :><CR>:echo "Indent"<CR>
 :nnoremap <S-Tab> :<<CR>:echo "Unindent"<CR>
 :vnoremap <Tab> >gv
 :vnoremap <S-Tab> <gv
+
+
 
 "" delete mapping
 :nnoremap <C-W> i<C-W>
@@ -216,6 +221,8 @@ set statusline+=%#CurrLine#[行：%c\ ,列：%l/%L]%3p%%\
 "" Forced Close 
 :inoremap <C-F12> <Esc>:q!<CR>
 :nnoremap <C-F12> <Esc>:q!<CR>
+
+
 
 "" Select Mode
 :inoremap <S-Up> <Esc>v<Up>
@@ -227,9 +234,6 @@ set statusline+=%#CurrLine#[行：%c\ ,列：%l/%L]%3p%%\
 :nnoremap <S-Left> <Esc>v<Left>
 :nnoremap <S-Right> <Esc>v<Right>
 
-" split window
-:nnoremap <C-_> :sp<CR>
-:nnoremap <C-Bslash> :vs<CR>
 
 "" wrap selected words in visual mode
 :vnoremap " :s/\%V\(.*\)\%V/"\1"/<CR>gv<RIGHT><RIGHT><Esc><Esc>
