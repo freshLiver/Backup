@@ -104,11 +104,10 @@ alias aws='docker run -it amazon/aws-cli'
 alias twspace="sh ~/Dropbox/Side/Twitter/AutoTwSpace/tw-space-dl.sh"
 alias yt="~/Softwares/yt-dlp"
 
-# zsh-bd, git zsh-autosuggestions zsh-syntax-highlighting
+# git zsh-autosuggestions zsh-syntax-highlighting
 . $HOME/.oh-my-zsh/plugins/git/git.plugin.zsh
 . $HOME/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 . $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-. $HOME/.zsh/plugins/bd/bd.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
