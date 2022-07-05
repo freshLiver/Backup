@@ -62,6 +62,10 @@ nnoremap <F3> <Esc>:ClangFormat<CR>
 inoremap <F3> <Esc>:ClangFormat<CR>
 vnoremap <F3> <Esc><Esc>:ClangFormat<CR>
 
+" git
+Plugin 'airblade/vim-gitgutter'
+set updatetime=100
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
