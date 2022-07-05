@@ -1,3 +1,6 @@
+[Animation]
+Frames=10
+
 [Desktop Entry]
 DefaultProfile=KonsoleConfig.profile
 
@@ -6,5 +9,6 @@ FirstRun=false
 
 [Window]
 DynamicTabTitles=true
-Height=87
+Height=88
 ShowSystrayIcon=false
+Width=95
