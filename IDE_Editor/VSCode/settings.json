@@ -16,9 +16,8 @@
     "editor.fontLigatures": true,
     // indent 
     "editor.wordWrap": "on",
-    "editor.inlayHints.enabled": true,
+    "editor.inlayHints.enabled": "on",
     "editor.wrappingIndent": "indent",
-    "editor.renderIndentGuides": true,
     // auto save 
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
@@ -145,6 +144,11 @@
     "extensions.autoUpdate": false,
     // * Spell Check
     "cSpell.spellCheckDelayMs": 500,
+    "cSpell.enableFiletypes": [
+        "shellscript"
+    ],
+    "cSpell.allowCompoundWords": true,
+    "cSpell.diagnosticLevel": "Hint",
     // * bracket 
     "editor.bracketPairColorization.enabled": true,
     // "bracketPairColorizer.forceUniqueOpeningColor": true,
@@ -291,20 +295,6 @@
         "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
     },
     "terminal.integrated.tabs.location": "left",
-    "cSpell.userWords": [
-        "Cloudant",
-        "CSIE",
-        "cuda",
-        "CVPR",
-        "hsi",
-        "jsonify",
-        "markdownify",
-        "NCKU",
-        "pyplot",
-        "strdupf",
-        "textbox",
-        "youtube"
-    ],
     "emmet.includeLanguages": {
         "liquid": "html"
     },
@@ -312,10 +302,6 @@
     "editor.minimap.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "latex-workshop.view.pdf.viewer": "tab",
-    "cSpell.enableFiletypes": [
-        "shellscript"
-    ],
-    "cSpell.allowCompoundWords": true,
     "search.showLineNumbers": true,
     "C_Cpp.default.cppStandard": "c++14",
     "C_Cpp.default.cStandard": "c11",
@@ -328,6 +314,7 @@
     "workbench.sideBar.location": "right",
     "python.venvPath": "~/venv/",
     "window.zoomLevel": 1,
+    "editor.guides.indentation": true,
     // 
     // 
     // 
