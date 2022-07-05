@@ -89,6 +89,11 @@ Color=220,230,231
 Color=252,252,252
 
 [General]
+Anchor=0.5,0.5
+Blur=false
+ColorRandomization=false
 Description=微風
-Opacity=0.86
+FillStyle=Tile
+Opacity=0.9
 Wallpaper=
+WallpaperOpacity=1
