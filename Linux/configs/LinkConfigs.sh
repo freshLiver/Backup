@@ -18,7 +18,7 @@ ln -srf ./shell/zsh/.zshrc "$HOME/.zshrc"
 ln -srf ./shell/zsh/mytheme.zsh-theme "$ZSH_TEHEM_DIR"
 
 # yakuake -- .config/yakuakerc
-ln -srf ./shell/yakuakerc "$HOME_LOCAL_SHARE"
+ln -srf ./shell/yakuake/yakuakerc "$HOME_CONFIG"
 
 # konsole -- .profile and colorscheme
 KONSOLE_CONFIG_DIR="$HOME_LOCAL_SHARE/konsole"
