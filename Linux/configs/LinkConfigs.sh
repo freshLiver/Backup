@@ -69,11 +69,12 @@ ln -srf ./polybar/miko.ini "$POLYBAR_CONFIG_DIR/config.ini"
 LATTE_CONFIG_DIR="$HOME_CONFIG/latte"
 mkdir -p "$LATTE_CONFIG_DIR"
 
+echo "latte-dock will be killed to avoid breaking current layout config"
+pkill latte-dock
+echo "Please restart latte-dock and change layout if needed"
+
 cp -f ./latte/K21.layout.latte "$LATTE_CONFIG_DIR/K21.layout.latte"
 cp -f ./latte/K21NB.layout.latte "$LATTE_CONFIG_DIR/K21NB.layout.latte"
-
-echo "Please restart latte-dock and change layout"
-
 
 
 # rofi -- whole directory
