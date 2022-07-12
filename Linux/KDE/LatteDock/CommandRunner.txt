@@ -1,6 +1,0 @@
-sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/DownloadUploadSpeed.sh 1
-
-sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/CPUUsage.sh 1
-sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/CPUTemperature.sh 2
-sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/KeyboardLockState.sh 1
-sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/MemUsage.sh 1
