@@ -28,6 +28,14 @@ ln -srf ./shell/konsole/Breeze.colorscheme "$KONSOLE_CONFIG_DIR"
 ln -srf ./shell/konsole/KonsoleConfig.profile "$KONSOLE_CONFIG_DIR"
 
 
+# vscode -- settings.json and keybind.json
+VSCODE_CONFIG_DIR="$HOME_CONFIG/Code/User"
+mkdir -p "$VSCODE_CONFIG_DIR"
+
+ln -srf ./VSCode/settings.json "$VSCODE_CONFIG_DIR/settings.json"
+ln -srf ./VSCode/keybindings.json "$VSCODE_CONFIG_DIR/keybindings.json"
+
+
 # vim -- .vimrc and .vim/colors
 VIM_THEME_DIR="$HOME/.vim/"
 mkdir -p "$VIM_THEME_DIR"
