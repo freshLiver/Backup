@@ -35,12 +35,9 @@ ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 
 
-# Prompt hints
+# Prompt variables (seems cannot include functions)
 USER_DEVICE_PROMPT=%{$GREEN_BOLD%}%n@%m%{$RESET_COLOR%}
 PATH_PROMPT=%{$YELLOW_BOLD%}%~%u%{$RESET_COLOR%}
-
-GIT_BRIEF_PROMPT=$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
-GIT_DETAIL_PROMPT=%{$GREEN_BOLD%}$(git_current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}
 
 TIME_PROMPT=%{$GREEN_BOLD%}%D{%H:%M:%S}%{$RESET_COLOR%}
 EXIT_PROMPT=%{$GREEN_BOLD%}%(?..%{$RED%}[%?]\ )\$\ %{$RESET_COLOR%}
@@ -48,7 +45,7 @@ EXIT_PROMPT=%{$GREEN_BOLD%}%(?..%{$RED%}[%?]\ )\$\ %{$RESET_COLOR%}
 
 # Prompt format
 PROMPT='
-$USER_DEVICE_PROMPT:$PATH_PROMPT $GIT_BRIEF_PROMPT
+$USER_DEVICE_PROMPT:$PATH_PROMPT $(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
 $TIME_PROMPT $EXIT_PROMPT'
 
-RPROMPT='$GIT_DETAIL_PROMPT'
+RPROMPT='%{$GREEN_BOLD%}$(git_current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
