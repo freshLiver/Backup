@@ -1,24 +1,43 @@
 {
-    /******************************************************************************
-    *
-    * VScode
-    * 
-    *******************************************************************************/
+    //
+    //    
+    //  ! Basic Configs
+    //
+    // * Tasks
+    // 
     "debug.onTaskErrors": "showErrors",
-    "editor.matchBrackets": "always",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.suggestSelection": "first",
-    // font settings
-    "editor.fontSize": 16,
-    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "update.mode": "manual",
+    "update.showReleaseNotes": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "security.workspace.trust.untrustedFiles": "open",
+    "search.showLineNumbers": true,
+    // 
+    // * Font/Word/Bracket Configs
+    // 
     "editor.fontFamily": "'JetBrains Mono', 'FiraCode Nerd Font Mono', 'Ubuntu Mono', monospace",
     "editor.fontLigatures": true,
-    // indent 
+    "editor.fontSize": 16,
     "editor.wordWrap": "on",
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hant": true
+    },
+    "editor.matchBrackets": "always",
+    // 
+    // * Guide/Indent/Hint/Suggestion
+    // 
+    "editor.guides.indentation": true,
     "editor.inlayHints.enabled": "on",
+    "editor.suggestSelection": "first",
     "editor.wrappingIndent": "indent",
-    // auto save 
+    "editor.bracketPairColorization.enabled": true,
+    // 
+    // * Explorer/File/AutoSave/
+    // 
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.autoReveal": false,
+    "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
     "files.exclude": {
@@ -35,142 +54,149 @@
         "**/*.gitignore": false,
         "**/*.gitattributes": true,
     },
-    // terminal setting
+    // 
+    // * Terminal
+    // 
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontSize": 16,
-    // vscode update 
-    "update.mode": "manual",
-    "update.showReleaseNotes": false,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    //
-    "workbench.action.debug.selectandstart": true,
+    "terminal.integrated.tabs.location": "left",
+    // 
+    // 
+    // 
+    "workbench.sideBar.location": "right",
+    "window.zoomLevel": 1,
     "workbench.startupEditor": "newUntitledFile",
-    // icon/color scheme
+    // 
+    // 
+    // * Color & Icon Configs
+    // 
+    // 
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Monokai High Contrast",
+    "workbench.colorTheme": "Dracula",
     "workbench.colorCustomizations": {
-        "activityBar.background": "#6f727496",
-        "activityBar.foreground": "#ffffff",
-        "activityBarBadge.background": "#bb65c7",
-        /* 右邊樹狀 list 的顏色 */
-        "list.activeSelectionForeground": "#00ff6a",
-        "list.activeSelectionBackground": "#0bfff370",
-        "list.inactiveSelectionForeground": "#00ff6a",
-        "list.inactiveSelectionBackground": "#0bfff370",
-        "list.highlightForeground": "#b68fbb",
-        "tree.indentGuidesStroke": "#fcff61",
+        // 
+        // ** 側欄相關
+        // 
+        // "activityBar.background": "#6f727496",
+        // "activityBar.foreground": "#ffffff",
+        // "activityBarBadge.background": "#bb65c7",
+        //
         // "sideBar.background": "#4f5253a8",
-        "sideBar.border": "#e838ff",
-        /* menu 相關顏色 */
-        "menubar.selectionForeground": "#dddddd",
-        "menubar.selectionBackground": "#217e45",
-        "menu.selectionForeground": "#dddddd",
-        "menu.selectionBackground": "#217e45", // menu 下拉選單的碰到的的背景色
-        "scrollbarSlider.activeBackground": "#00ff2a", // 點下去的顏色 
-        "scrollbarSlider.hoverBackground": "#00ff2a6b", // 碰到的顏色 
-        "scrollbarSlider.background": "#5ff17725", // 沒碰的顏色
-        "tab.border": "#ffffff15", // tab 的分隔線
-        "tab.activeBackground": "#62626267",
-        "tab.activeForeground": "#ff9f32",
-        "tab.activeBorder": "#00ff6a", // 當前 tab 的底線色 
-        "tab.inactiveForeground": "#ff9f32",
-        "tab.inactiveBackground": "#423f3f32",
-        "tab.unfocusedActiveForeground": "#ff9f32", // 非當前分割畫面的選中 tab 字色
-        "tab.unfocusedActiveBorder": "#00ff6a",
-        "tab.unfocusedInactiveForeground": "#ff9f32",
-        "tab.unfocusedActiveBackground": "#423f3f32",
-        /* terminal 等 panel 的相關顏色 */
+        // "sideBar.border": "#e838ff",
+        //
+        // *** 側欄檔案樹相關
+        // 
+        // "list.activeSelectionForeground": "#00ff6a",
+        // "list.activeSelectionBackground": "#0bfff370",
+        // "list.inactiveSelectionForeground": "#00ff6a",
+        // "list.inactiveSelectionBackground": "#0bfff370",
+        // "list.highlightForeground": "#b68fbb",
+        // 
+        "tree.indentGuidesStroke": "#fe4b74",
+        // 
+        // ** Menu 相關
+        // 
+        // "menubar.selectionForeground": "#dddddd",
+        // "menubar.selectionBackground": "#217e45",
+        // "menu.selectionForeground": "#dddddd",
+        // "menu.selectionBackground": "#217e45", // menu 下拉選單的碰到的的背景色
+        // 
+        // ** 捲軸相關
+        // 
+        // "scrollbarSlider.activeBackground": "#00ff2a", // 點下去的顏色 
+        // "scrollbarSlider.hoverBackground": "#00ff2a6b", // 碰到的顏色 
+        // "scrollbarSlider.background": "#5ff17725", // 沒碰的顏色
+        // 
+        // ** 分頁相關
+        // 
+        // "tab.border": "#ffffff15", // tab 的分隔線
+        // "tab.activeBackground": "#62626267",
+        // "tab.activeForeground": "#ff9f32",
+        // "tab.activeBorder": "#00ff6a", // 當前 tab 的底線色 
+        // "tab.inactiveForeground": "#ff9f32",
+        // "tab.inactiveBackground": "#423f3f32",
+        // "tab.unfocusedActiveForeground": "#ff9f32", // 非當前分割畫面的選中 tab 字色
+        // "tab.unfocusedActiveBorder": "#00ff6a",
+        // "tab.unfocusedInactiveForeground": "#ff9f32",
+        // "tab.unfocusedActiveBackground": "#423f3f32",
+        // 
+        // ** Panel 與 Terminal 相關
+        // 
+        // "panel.border": "#e838ff",
+        // "panelTitle.activeBorder": "#00ff6a",
+        // "panelTitle.activeForeground": "#00ff6ade",
+        // "panelTitle.inactiveForeground": "#b68fbb",
+        // 
         // "terminal.background": "#3b3d3d",
         // "terminal.foreground": "#07c300",
-        "panel.border": "#e838ff",
-        "panelTitle.activeBorder": "#00ff6a",
-        "panelTitle.activeForeground": "#00ff6ade",
-        "panelTitle.inactiveForeground": "#b68fbb",
-        // https://www.google.com
-        "textLink.foreground": "#00ccff", // 連結的提示框的字色
-        /* auto complete widget 相關顏色 */
-        // "editor.background": "#222230",
-        "editorSuggestWidget.foreground": "#b68fbb",
-        "editorSuggestWidget.selectedBackground": "#ff880057",
-        /* editor widget (ex.搜尋框) 的相關設定 */
-        "editorWidget.resizeBorder": "#ff9f32",
-        "editorWidget.border": "#b68fbb",
-        /* editor 的搜尋相關顏色 */
-        "editor.wordHighlightStrongBackground": "#ce92ff48",
-        "editor.wordHighlightBackground": "#ff7b0038",
-        "editor.findMatchBorder": "#00ff0000",
-        "editor.findMatchBackground": "#ff00009d",
-        "editor.findMatchHighlightBackground": "#ff7b002a", // 其他符合的 high light 
-        "editorLineNumber.foreground": "#56e5f8",
-        "editorLineNumber.activeForeground": "#ff008c",
-        /* editor section 反白 */
-        "editor.selectionBackground": "#b7d6ba8d",
-        "editor.selectionHighlightBackground": "#0000004f",
-        /* current line background */
-        "editor.lineHighlightBackground": "#a6d2df1e",
-        "selection.background": "#00a2ff", // UI, widget 反白顏色
-        "progressBar.background": "#b68fbb",
-        "pickerGroup.foreground": "#b68fbb",
-        "notificationLink.foreground": "#b68fbb",
+        // 
+        // ** Editor 相關
+        // 
+        // "editor.wordHighlightStrongBackground": "#ce92ff48",
+        // "editor.wordHighlightBackground": "#ff7b0038",
+        // "editor.findMatchBorder": "#00ff0000",
+        // "editor.findMatchBackground": "#ff00009d",
+        // "editor.findMatchHighlightBackground": "#ff7b002a", // 其他符合的 high light 
+        // "editor.selectionBackground": "#b7d6ba8d",
+        // "editor.selectionHighlightBackground": "#0000004f",
+        // "editor.lineHighlightBackground": "#a6d2df1e",
+        // 
+        // *** Indent 與 Line Number
+        // 
+        "editorIndentGuide.activeBackground": "#fe4b74",
+        // "editorIndentGuide.background": "#c5a8ca",
+        // 
+        // "editorLineNumber.foreground": "#56e5f8",
+        "editorLineNumber.activeForeground": "#fe4b74",
+        // 
+        // *** Widgets
+        // 
+        // "editorSuggestWidget.foreground": "#b68fbb",
+        // "editorSuggestWidget.selectedBackground": "#ff880057",
+        // 
+        // "editorWidget.resizeBorder": "#ff9f32",
+        // "editorWidget.border": "#b68fbb",
+        // 
+        // *** 超連結
+        // 
+        // "textLink.foreground": "#00ccff", // 超連結的提示框的字色 https://google.com
+        // 
+        // *** 其他
+        // 
+        // "breadcrumb.activeSelectionForeground": "#b68fbb",
+        // "notificationLink.foreground": "#b68fbb",
+        // "pickerGroup.foreground": "#b68fbb",
+        // "progressBar.background": "#b68fbb",
+        // "selection.background": "#00a2ff", // UI, widget 反白顏色
+        // "settings.modifiedItemIndicator": "#b68fbb",
+        // "settings.headerForeground": "#b68fbb",
         // "statusBar.background": "#4391c5",
-        "settings.modifiedItemIndicator": "#b68fbb",
-        "settings.headerForeground": "#b68fbb",
-        "breadcrumb.activeSelectionForeground": "#b68fbb",
-        // indent color setting
-        "editorIndentGuide.activeBackground": "#ff0000",
-        "editorIndentGuide.background": "#c5a8ca",
     },
+    // 
+    // 
+    // ! Extension Configs
     //
-    // 
-    // 
-    // 
-    // 
-    /******************************************************************************
-     *
-     * Git
-     * 
-    *******************************************************************************/
-    "git.autofetchPeriod": 500,
-    // 
-    // 
-    // 
     //
-    // 
-    /******************************************************************************
-    *
-    * Extensions' Setting
-    * 
-    *******************************************************************************/
     "extensions.autoUpdate": false,
-    // * Spell Check
+    "pasteImage.basePath": "${currentFileDir}/imgs",
+    // 
+    // * Git
+    // 
+    "git.autofetchPeriod": 1000,
+    // 
+    // * cSpell Check
+    // 
     "cSpell.spellCheckDelayMs": 500,
+    "cSpell.allowCompoundWords": true,
+    "cSpell.diagnosticLevel": "Hint",
     "cSpell.enableFiletypes": [
         "shellscript"
     ],
-    "cSpell.allowCompoundWords": true,
-    "cSpell.diagnosticLevel": "Hint",
-    // * bracket 
-    "editor.bracketPairColorization.enabled": true,
-    // "bracketPairColorizer.forceUniqueOpeningColor": true,
-    // "bracketPairColorizer.highlightActiveScope": true,
-    // "bracketPairColorizer.rulerPosition": "Center",
-    // "bracketPairColorizer.excludedLanguages": [],
-    // "bracketPairColorizer.showHorizontalScopeLine": false,
-    // "bracketPairColorizer.timeOut": 100,
-    // "bracketPairColorizer.activeScopeCSS": [
-    //     "borderStyle : solid",
-    //     "borderWidth : 0px",
-    //     "borderColor : white; opacity: 0.2",
-    //     "backgroundColor: white",
-    // ],
-    // "bracketPairColorizer.scopeLineCSS": [
-    //     "borderStyle : solid",
-    //     "borderWidth : 0px",
-    //     "borderColor : white; opacity: 0.7",
-    // ],
-    // * TODO TREE
+    // 
+    // * TODO Tree
+    // 
     "todo-tree.tree.showScanModeButton": false,
-    "todo-tree.highlights.highlightDelay": 50,
+    "todo-tree.highlights.highlightDelay": 100,
     "todo-tree.highlights.defaultHighlight": {
         "icon": "check",
         "type": "whole-line",
@@ -180,6 +206,12 @@
         "iconColour": "#c6d100",
         "rulerColour": "#FFFF00",
     },
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "TESTING",
+        "BUG"
+    ],
     "todo-tree.highlights.customHighlight": {
         "BUG": {
             "icon": "bug",
@@ -206,82 +238,70 @@
             "iconColour": "#17c6d6"
         }
     },
-    "todo-tree.general.tags": [
-        "TODO",
-        "FIXME",
-        "TESTING",
-        "BUG"
-    ],
-    // * rainbow indent color setting
-    // "indentRainbow.errorColor": "#FF4C6D50",
-    // "indentRainbow.colors": [
-    //     "#29677740",
-    //     "#5acbff25",
-    //     "#528f9e30",
-    // ],
-    "C_Cpp.default.includePath": [
-        "${default}"
-    ],
-    // c/cpp code format
-    "C_Cpp.clang_format_path": "clang-format",
+    // 
+    // 
+    // * C/CPP
+    // 
+    // 
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
-    // clang-format setting
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.cppStandard": "c++14",
+    "C_Cpp.default.includePath": [
+        "${default}"
+    ],
+    "C_Cpp.autoAddFileAssociations": false,
+    // 
+    // ** clang-format
+    // 
+    "C_Cpp.clang_format_path": "clang-format",
+    "C_Cpp.clang_format_fallbackStyle": "file",
     "clang-format.executable": "clang-format",
     "clang-format.assumeFilename": "/home/freshliver/Dropbox/Programming/.clang-format",
-    "C_Cpp.clang_format_fallbackStyle": "file",
     "clang-format.language.c.fallbackStyle": "LLVM",
     "clang-format.language.cpp.fallbackStyle": "LLVM",
     "clang-format.fallbackStyle": "Google",
     // 
     // 
-    // 
+    // * Python
     //
     // 
-    /******************************************************************************
-    * 
-    * ! Python
-    * 
-    *******************************************************************************/
-    "python.formatting.provider": "autopep8",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
     "python.analysis.cacheFolderPath": "/tmp",
+    "python.formatting.provider": "autopep8",
     "python.formatting.autopep8Args": [
         "--max-line-length",
         "130",
         "--experimental",
     ],
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
     "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.venvPath": "~/venv/",
+    // 
+    // ** ipynb
+    // 
     "notebook.lineNumbers": "on",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     // 
     // 
+    // * LaTeX
+    // 
+    // 
+    "latex-workshop.bibtex-format.tab": "4 spaces",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.view.pdf.viewer": "tab",
+    // 
+    // 
+    // * Other Languages
     // 
     //
-    // 
-    /******************************************************************************
-    *
-    * ! JAVA
-    * 
-    *******************************************************************************/
-    // 
-    // 
-    // 
-    //
-    // 
-    /******************************************************************************
-    *
-    * ! Other Language
-    * 
-    *******************************************************************************/
     "[verilog]": {
         "editor.defaultFormatter": "ericsonj.verilogformat"
     },
@@ -294,30 +314,12 @@
     "[css]": {
         "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
     },
-    "terminal.integrated.tabs.location": "left",
     "emmet.includeLanguages": {
         "liquid": "html"
     },
-    "explorer.autoReveal": false,
-    "editor.minimap.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "latex-workshop.view.pdf.viewer": "tab",
-    "search.showLineNumbers": true,
-    "C_Cpp.default.cppStandard": "c++14",
-    "C_Cpp.default.cStandard": "c11",
-    "latex-workshop.bibtex-format.tab": "4 spaces",
-    "latex-workshop.latex.autoBuild.run": "never",
-    "editor.unicodeHighlight.allowedLocales": {
-        "zh-hant": true
-    },
-    "pasteImage.basePath": "${currentFileDir}/imgs",
-    "workbench.sideBar.location": "right",
-    "python.venvPath": "~/venv/",
-    "window.zoomLevel": 1,
-    "editor.guides.indentation": true,
     // 
     // 
+    // ! vvv New Configs vvv
     // 
-    //
-    // fin
+    // 
 }
