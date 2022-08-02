@@ -61,10 +61,11 @@
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.tabs.location": "left",
     // 
-    // 
+    // ! TODO
     // 
     "workbench.sideBar.location": "right",
     "window.zoomLevel": 1,
+    "window.menuBarVisibility": "hidden",
     "workbench.startupEditor": "newUntitledFile",
     // 
     // 
@@ -72,7 +73,7 @@
     // 
     // 
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Dracula Soft",
     "workbench.colorCustomizations": {
         // 
         // ** 側欄相關
@@ -134,11 +135,14 @@
         // 
         // "editor.wordHighlightStrongBackground": "#ce92ff48",
         // "editor.wordHighlightBackground": "#ff7b0038",
+        // 
         // "editor.findMatchBorder": "#00ff0000",
         // "editor.findMatchBackground": "#ff00009d",
         // "editor.findMatchHighlightBackground": "#ff7b002a", // 其他符合的 high light 
+        // 
         // "editor.selectionBackground": "#b7d6ba8d",
         // "editor.selectionHighlightBackground": "#0000004f",
+        // 
         // "editor.lineHighlightBackground": "#a6d2df1e",
         // 
         // *** Indent 與 Line Number
