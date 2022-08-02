@@ -87,3 +87,13 @@ ln -nsrf ./deadbeef/ "$HOME_CONFIG"
 
 # mpv -- whole directory
 ln -nsrf ./mpv/ "$HOME_CONFIG"
+
+
+
+# libinput-gesture
+ln -srf ./gesture/libinput-gestures.conf "$HOME_CONFIG/libinput-gestures.conf"
+
+echo "Restarting..."
+libinput-gestures-setup restart
+libinput-gestures-setup autostart start
+
