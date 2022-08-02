@@ -7,8 +7,12 @@ DefaultProfile=KonsoleConfig.profile
 [Dialogs]
 FirstRun=false
 
+[Shortcuts]
+next-terminal=Ctrl+Shift+Down
+previous-terminal=Ctrl+Shift+Up
+
 [Window]
 DynamicTabTitles=true
-Height=90
+Height=95
 ShowSystrayIcon=false
 Width=95
