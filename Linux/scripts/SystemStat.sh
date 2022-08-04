@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# dependencies: dstat, lm-sensors/lm_sensors
-
+# dependencies: dstat, lm-sensors, bc
 USAGE="Usage: ./SystemStat.sh command [interval]"
 
-# default interval 1s
-COMMAND=$1
-INTERVAL=${2:-0}
+COMMAND=$1          # no default command, must be specified
+INTERVAL=${2:-0}    # default no sleep
 
 if [[ -n "$COMMAND" ]]; then
 
@@ -39,7 +37,7 @@ if [[ -n "$COMMAND" ]]; then
     esac
 
     # print result
-    echo "$OUTPUT"
+    echo " $OUTPUT "
 
     # sleep if needed
     if [[ $INTERVAL -ge 1 ]]; then
