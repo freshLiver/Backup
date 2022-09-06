@@ -73,7 +73,7 @@
     // 
     // 
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Dracula Soft",
+    "workbench.colorTheme": "Dracula",
     "workbench.colorCustomizations": {
         // 
         // ** 側欄相關
@@ -262,12 +262,11 @@
     // 
     // ** clang-format
     // 
-    "C_Cpp.clang_format_path": "clang-format",
-    "C_Cpp.clang_format_fallbackStyle": "file",
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
     "clang-format.executable": "clang-format",
-    "clang-format.assumeFilename": "/home/freshliver/Dropbox/Programming/.clang-format",
-    "clang-format.language.c.fallbackStyle": "LLVM",
-    "clang-format.language.cpp.fallbackStyle": "LLVM",
+    "clang-format.language.c.fallbackStyle": "Google",
+    "clang-format.language.cpp.fallbackStyle": "Google",
     "clang-format.fallbackStyle": "Google",
     // 
     // 
@@ -321,6 +320,12 @@
     "emmet.includeLanguages": {
         "liquid": "html"
     },
+    "redhat.telemetry.enabled": false,
+    "clang-format.assumeFilename": ".clang-format",
+    "clang-format.language.c.style": "file",
+    "clang-format.language.typescript.fallbackStyle": "",
+    "clang-format.language.javascript.fallbackStyle": "",
+    "clang-format.language.cpp.style": "file",
     // 
     // 
     // ! vvv New Configs vvv
