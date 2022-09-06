@@ -25,6 +25,7 @@ KONSOLE_CONFIG_DIR="$HOME_LOCAL_SHARE/konsole"
 mkdir -p "$KONSOLE_CONFIG_DIR"
 
 ln -srf ./shell/konsole/Breeze.colorscheme "$KONSOLE_CONFIG_DIR"
+ln -srf ./shell/konsole/Linux.colorscheme "$KONSOLE_CONFIG_DIR"
 ln -srf ./shell/konsole/KonsoleConfig.profile "$KONSOLE_CONFIG_DIR"
 
 

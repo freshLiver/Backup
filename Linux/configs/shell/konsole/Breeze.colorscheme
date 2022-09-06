@@ -1,11 +1,17 @@
 [Background]
 Color=49,54,59
+RandomHueRange=360
+RandomSaturationRange=100
 
 [BackgroundFaint]
 Color=49,54,59
+RandomHueRange=360
+RandomSaturationRange=100
 
 [BackgroundIntense]
 Color=35,38,41
+RandomHueRange=360
+RandomSaturationRange=100
 
 [Color0]
 Color=49,54,59
@@ -81,19 +87,25 @@ Color=252,252,252
 
 [Foreground]
 Color=239,240,241
+RandomHueRange=360
+RandomSaturationRange=100
 
 [ForegroundFaint]
 Color=220,230,231
+RandomHueRange=360
+RandomSaturationRange=100
 
 [ForegroundIntense]
 Color=252,252,252
+RandomHueRange=360
+RandomSaturationRange=100
 
 [General]
 Anchor=0.5,0.5
-Blur=false
+Blur=true
 ColorRandomization=false
 Description=微風
 FillStyle=Tile
-Opacity=0.8
+Opacity=0.5
 Wallpaper=
 WallpaperOpacity=1

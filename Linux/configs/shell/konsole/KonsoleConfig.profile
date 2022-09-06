@@ -1,9 +1,9 @@
 [Appearance]
 AntiAliasFonts=true
-ColorScheme=Breeze
+ColorScheme=Linux
 Font=JetBrainsMono Nerd Font Mono,12,-1,5,57,0,0,0,0,0,Medium
 LineSpacing=1
-UseFontLineChararacters=false
+UseFontLineChararacters=true
 
 [General]
 Name=KonsoleConfig
