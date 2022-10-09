@@ -20,7 +20,7 @@ Color=49,54,59
 Color=49,54,59
 
 [Color0Intense]
-Color=127,140,141
+Color=239,240,241
 
 [Color1]
 Color=237,21,21
@@ -91,7 +91,7 @@ RandomHueRange=360
 RandomSaturationRange=100
 
 [ForegroundFaint]
-Color=220,230,231
+Color=239,240,241
 RandomHueRange=360
 RandomSaturationRange=100
 
@@ -106,6 +106,6 @@ Blur=true
 ColorRandomization=false
 Description=微風
 FillStyle=Tile
-Opacity=0.5
+Opacity=0.7
 Wallpaper=
 WallpaperOpacity=1

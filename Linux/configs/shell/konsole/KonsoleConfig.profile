@@ -1,11 +1,13 @@
 [Appearance]
 AntiAliasFonts=true
-ColorScheme=Linux
+ColorScheme=Breeze
 Font=JetBrainsMono Nerd Font Mono,12,-1,5,57,0,0,0,0,0,Medium
 LineSpacing=1
 UseFontLineChararacters=true
 
 [General]
+DimWhenInactive=true
+InvertSelectionColors=true
 Name=KonsoleConfig
 Parent=FALLBACK/
 TerminalColumns=110
