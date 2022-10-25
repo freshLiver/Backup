@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=drawio
+Exec=~/Softwares/drawio.AppImage
+
+Categories=Diagram;Editor;
+GenericName=Diagram Editor
+Type=Application
+MimeType=
+
+StartupNotify=true
+StartupWMClass=drawio
