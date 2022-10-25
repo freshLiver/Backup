@@ -101,8 +101,4 @@ libinput-gestures-setup autostart start
 
 
 # desktop entries
-DESKTOP_ENTRIES_DIR="$HOME_LOCAL_SHARE/applications"
-mkdir -p "$DESKTOP_ENTRIES_DIR"
-
-ln -srf ./apps/entries/* "$DESKTOP_ENTRIES_DIR"
-
+bash -c "cd ./apps/ && ./LinkApps.sh"
