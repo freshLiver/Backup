@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=drawio
 Exec=~/Softwares/drawio.AppImage
+Icon=drawio.png
 
 Categories=Diagram;Editor;
 GenericName=Diagram Editor
