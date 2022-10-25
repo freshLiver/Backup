@@ -1,17 +1,17 @@
 [Desktop Entry]
-Categories=Network;InstantMessaging;
-Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
-Exec=~/Softwares/Discord/Discord
-GenericName=Internet Messenger
-Icon=discord
-MimeType=
 Name=Discord
+Exec=~/Softwares/Discord/Discord
 Path=~/Softwares/Discord/
+Icon=discord.png
+
+Categories=Network;InstantMessaging;
+GenericName=Internet Messenger
+MimeType=
+Type=Application
+
 StartupNotify=true
 StartupWMClass=discord
-Terminal=false
-TerminalOptions=
-Type=Application
+
 X-DBUS-ServiceName=
 X-DBUS-StartupType=
 X-KDE-RunOnDiscreteGpu=false
