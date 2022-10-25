@@ -1,8 +1,10 @@
 [Desktop Entry]
-Comment=
-Exec=~/Dropbox/Backup/Linux/softwares/krita_amd64.appimage
-Icon=calligrakrita
 Name=Krita
-Path[$e]=
-StartupNotify=true
+Exec=~/Softwares/krita.appimage
+Icon=calligrakrita
+
+Categories=Image;Editor;
+GenericName=Image Editor
 Type=Application
+
+StartupNotify=true
