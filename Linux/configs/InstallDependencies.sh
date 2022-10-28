@@ -23,13 +23,3 @@ read do_upgrade_apt
 if [ "$do_upgrade_apt" = "y" ] || [ "$do_upgrade_apt" = "Y" ]; then
     sudo apt-get upgrade
 fi
-
-
-## rofi
-if [ "`command -v rofi`" = ""  ]; then
-    echo "Rofi not found, install now..."
-    sudo apt-get install rofi
-fi
-
-
-
