@@ -213,7 +213,8 @@
     "todo-tree.general.tags": [
         "TODO",
         "FIXME",
-        "TESTING",
+        "TEST",
+        "NOTE",
         "BUG"
     ],
     "todo-tree.highlights.customHighlight": {
@@ -233,7 +234,15 @@
             "rulerColour": "#d6174d",
             "iconColour": "#d6174d"
         },
-        "TESTING": {
+        "NOTE": {
+            "icon": "bookmark",
+            "type": "whole-line",
+            "foreground": "#c9c9c9",
+            "background": "#17c6d6",
+            "rulerColour": "#17c6d6",
+            "iconColour": "#17c6d6"
+        },
+        "TEST": {
             "icon": "beaker",
             "type": "whole-line",
             "foreground": "#c9c9c9",
@@ -263,11 +272,10 @@
     // ** clang-format
     // 
     "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "clang-format.assumeFilename": ".clang-format",
     "clang-format.executable": "clang-format",
-    "clang-format.language.c.fallbackStyle": "Google",
-    "clang-format.language.cpp.fallbackStyle": "Google",
-    "clang-format.fallbackStyle": "Google",
+    "clang-format.language.c.style": "file",
+    "clang-format.language.cpp.style": "file",
     // 
     // 
     // * Python
@@ -320,12 +328,6 @@
     "emmet.includeLanguages": {
         "liquid": "html"
     },
-    "redhat.telemetry.enabled": false,
-    "clang-format.assumeFilename": ".clang-format",
-    "clang-format.language.c.style": "file",
-    "clang-format.language.typescript.fallbackStyle": "",
-    "clang-format.language.javascript.fallbackStyle": "",
-    "clang-format.language.cpp.style": "file",
     // 
     // 
     // ! vvv New Configs vvv
