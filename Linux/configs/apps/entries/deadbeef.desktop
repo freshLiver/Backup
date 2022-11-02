@@ -2,7 +2,7 @@
 Categories=Music;Player;
 Exec=~/Dropbox/Backup/Linux/softwares/deadbeef/deadbeef
 GenericName=Music Player
-Icon=deadbeef.png
+Icon=deadbeef.svg
 MimeType=
 Name=DeaDBeeF
 Path=~/Dropbox/Backup/Linux/softwares/deadbeef
