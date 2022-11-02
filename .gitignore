@@ -1,7 +1,8 @@
 Fonts/
 
-Android/Apps/
+Android/
 Linux/softwares/
 Windows/softwares/
+others/
 
 **/*.exe
