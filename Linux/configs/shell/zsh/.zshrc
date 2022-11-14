@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 alias cls="clear"
 command -v bat > /dev/null || alias bat="batcat"
 alias yt="~/Softwares/yt-dlp"
+command -v reboot > /dev/null || alias reboot="sudo reboot"
 
 # git zsh-autosuggestions zsh-syntax-highlighting
 . $HOME/.oh-my-zsh/plugins/git/git.plugin.zsh
