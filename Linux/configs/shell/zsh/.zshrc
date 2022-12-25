@@ -5,13 +5,6 @@
 export LC_ALL="en_US.UTF-8"
 export ZSH="$HOME/.oh-my-zsh"
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -108,10 +101,26 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cls="clear"
-command -v bat > /dev/null || alias bat="batcat"
-alias yt="~/Softwares/yt-dlp"
+
+command -v cls > /dev/null || alias cls="clear"
 command -v reboot > /dev/null || alias reboot="sudo reboot"
+
+# softwares
+export PATH="$HOME/Dropbox/Softwares/bin:$PATH"
+
+command -v bat > /dev/null || alias bat="batcat"
+command -v tags > /dev/null || alias tags="tmsu"
+command -v yt > /dev/null || alias yt="yt-dlp"
+
+
+# python env
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
 
 # git zsh-autosuggestions zsh-syntax-highlighting
 . $HOME/.oh-my-zsh/plugins/git/git.plugin.zsh
