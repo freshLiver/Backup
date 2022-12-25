@@ -1,10 +1,10 @@
 [Desktop Entry]
 Categories=Music;Player;
-Exec=~/Dropbox/Backup/Linux/softwares/deadbeef/deadbeef
-GenericName=Music Player
-Icon=deadbeef.svg
+Exec=~/Dropbox/Softwares/app/deadbeef/deadbeef
+Path=~/Dropbox/Softwares/app/deadbeef
+Icon=deadbeef.png
+Type=Application
 MimeType=
 Name=DeaDBeeF
-Path=~/Dropbox/Backup/Linux/softwares/deadbeef
+GenericName=Music Player
 StartupWMClass=deadbeef
-Type=Application

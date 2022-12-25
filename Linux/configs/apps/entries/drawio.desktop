@@ -2,11 +2,9 @@
 Name=drawio
 Exec=~/Softwares/drawio.AppImage
 Icon=drawio.png
-
-Categories=Diagram;Editor;
+StartupWMClass=drawio
 GenericName=Diagram Editor
+Categories=Diagram;Editor;
 Type=Application
 MimeType=
-
 StartupNotify=true
-StartupWMClass=drawio
