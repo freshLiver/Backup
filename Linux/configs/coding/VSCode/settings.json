@@ -142,7 +142,7 @@
         // 
         // "editor.selectionBackground": "#b7d6ba8d",
         // "editor.selectionHighlightBackground": "#0000004f",
-        "editor.selectionHighlightBorder":"#FF0000",
+        "editor.selectionHighlightBorder": "#FF0000",
         // 
         // "editor.lineHighlightBackground": "#a6d2df1e",
         // 
@@ -329,6 +329,7 @@
     "emmet.includeLanguages": {
         "liquid": "html"
     },
+    "editor.renderWhitespace": "boundary",
     // 
     // 
     // ! vvv New Configs vvv
