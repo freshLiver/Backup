@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Discord
-Exec=~/Dropbox/Softwares/Discord/Discord
-Path=~/Dropbox/Softwares/Discord/
+Exec=~/Dropbox/Softwares/app/Discord/Discord
+Path=~/Dropbox/Softwares/app/Discord/
 Icon=discord.png
 
 Categories=Network;InstantMessaging;
