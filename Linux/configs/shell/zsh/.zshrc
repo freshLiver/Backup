@@ -9,7 +9,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="mytheme"
+if [[ -z "$ZSH_THEME" ]]; then
+    ZSH_THEME="mytheme"
+    echo "ZSH_THEME not specified, use '$ZSH_THEME'."
+fi
+alias ztheme='(){ export ZSH_THEME="$1" && source $HOME/.zshrc }'
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,6 +116,7 @@ export PATH="$HOME/Dropbox/Softwares/bin:$PATH"
 command -v bat > /dev/null || alias bat="batcat"
 command -v tags > /dev/null || alias tags="tmsu"
 command -v yt > /dev/null || alias yt="yt-dlp"
+command -v btop > /dev/null || alias btop="$HOME/Softwares/btop/bin/btop"
 
 
 # python env
