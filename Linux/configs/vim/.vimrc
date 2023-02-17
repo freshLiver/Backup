@@ -43,7 +43,20 @@ let g:minimap_toggle='<C-F11>'
 
 """ clang
 Plugin 'rip-rip/clang_complete'
-let g:clang_library_path='/usr/lib/llvm-12/lib/libclang.so.1'
+
+function FindLibClang()
+    let libclang_paths = []
+    let libclang_paths += ["/usr/lib/x86_64-linux-gnu/libclang-*.so.1"]
+
+    for p in libclang_paths
+        if !empty(glob(p))
+            return glob(p)
+        endif
+    endfor
+endfunction
+
+let g:clang_library_path=FindLibClang()
+
 
 Plugin 'ervandew/supertab'
 """ python
