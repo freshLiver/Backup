@@ -47,10 +47,11 @@ Plugin 'rip-rip/clang_complete'
 function FindLibClang()
     let libclang_paths = []
     let libclang_paths += ["/usr/lib/x86_64-linux-gnu/libclang-*.so.1"]
+    let libclang_paths += ["/usr/lib64/libclang.so*"]
 
     for p in libclang_paths
         if !empty(glob(p))
-            return glob(p)
+            return glob(p,0,1)[0]
         endif
     endfor
 endfunction
