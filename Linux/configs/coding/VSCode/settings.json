@@ -64,7 +64,6 @@
     // ! TODO
     // 
     "workbench.sideBar.location": "right",
-    "window.zoomLevel": 1,
     "window.menuBarVisibility": "hidden",
     "workbench.startupEditor": "newUntitledFile",
     // 
@@ -332,6 +331,8 @@
     "editor.renderWhitespace": "boundary",
     "python.interpreter.infoVisibility": "always",
     "python.defaultInterpreterPath": "~/.pyenv/versions/3.7.15/envs/tmp/lib/python3.7/site-packages/python",
+    "window.zoomLevel": 1,
+    "notebook.output.textLineLimit": 1000,
     // 
     // 
     // ! vvv New Configs vvv
