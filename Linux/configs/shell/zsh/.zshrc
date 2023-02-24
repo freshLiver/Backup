@@ -109,7 +109,7 @@ command -v cls > /dev/null || alias cls="clear"
 command -v reboot > /dev/null || alias reboot="sudo reboot"
 
 # softwares
-export PATH="$HOME/Dropbox/Softwares/bin:$PATH"
+export PATH="$HOME/Dropbox/Softwares/bin:$HOME/.cargo/bin:$PATH"
 
 command -v bat > /dev/null || alias bat="batcat"
 command -v tags > /dev/null || alias tags="tmsu"
