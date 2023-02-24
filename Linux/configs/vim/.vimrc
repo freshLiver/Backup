@@ -15,6 +15,10 @@ Plugin 'yggdroot/indentline'
 let g:indentLine_color_term = 161
 let g:indentLine_char_list =  ['¦', '¦'] 
 
+"" for json, change conceallevel to show quote marks
+let g:vim_json_conceal=0
+
+
 " status line setting
 Plugin 'itchyny/lightline.vim'
 let g:lightline= { 'colorscheme' : 'materia' } 
@@ -39,10 +43,16 @@ nnoremap <F4> :NERDTreeToggle<CR>
 " minimap 
 Plugin 'severin-lemaignan/vim-minimap'
 let g:minimap_toggle='<C-F11>'
+
+
 " autocompletion
+Plugin 'valloric/youcompleteme'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 """ clang
-Plugin 'rip-rip/clang_complete'
+"Plugin 'rip-rip/clang_complete'
 
 function FindLibClang()
     let libclang_paths = []
@@ -72,9 +82,10 @@ Plugin 'ervandew/supertab'
 " auto formatter
 Plugin 'rhysd/vim-clang-format'
 let g:clang_format#command = '/usr/bin/clang-format'
-nnoremap <F3> <Esc>:ClangFormat<CR>
-inoremap <F3> <Esc>:ClangFormat<CR>
-vnoremap <F3> <Esc><Esc>:ClangFormat<CR>
+
+autocmd FileType c,cpp nnoremap <F3> <Esc>:ClangFormat<CR>
+autocmd FileType c,cpp inoremap <F3> <Esc>:ClangFormat<CR>
+autocmd FileType c,cpp vnoremap <F3> <Esc><Esc>:ClangFormat<CR>
 
 " git
 Plugin 'airblade/vim-gitgutter'
