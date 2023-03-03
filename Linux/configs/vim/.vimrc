@@ -225,6 +225,19 @@ set statusline+=%#CurrLine#[%3p%%\ %c:%l/%L]
 :nnoremap <C-J> <Esc>:m +1<CR>:echo "Move Down"<CR>
 :vnoremap <C-J> :m '>+1<CR>gv
 
+
+" mappings for cursor moving
+:inoremap <C-a> <Esc>^i
+:nnoremap <C-a> <Esc>^:echo "Move to Line Start"<CR>
+:vnoremap <C-a> ^gv
+
+:inoremap <C-e> <Esc>$a
+:nnoremap <C-e> <Esc>$:echo "Move to Line End"<CR>
+:vnoremap <C-e> $gv
+
+
+
+
 " mappings for window navigations
 :nnoremap <S-H> :wincmd h<CR>
 :nnoremap <S-J> :wincmd j<CR>
