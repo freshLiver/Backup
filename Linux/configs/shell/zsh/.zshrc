@@ -112,9 +112,11 @@ command -v reboot > /dev/null || alias reboot="sudo reboot"
 export PATH="$HOME/Dropbox/Softwares/bin:$HOME/.cargo/bin:$PATH"
 
 command -v bat > /dev/null || alias bat="batcat"
+command -v batraw > /dev/null || alias batraw="bat --color=never --wrap=never"
 command -v tags > /dev/null || alias tags="tmsu"
 command -v yt > /dev/null || alias yt="yt-dlp"
 command -v btop > /dev/null || alias btop="$HOME/Softwares/btop/bin/btop"
+command -v syslog > /dev/null || alias syslog="journalctl -f --no-hostname -o short-precise"
 
 
 # python env
