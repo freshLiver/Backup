@@ -192,7 +192,6 @@
     // 
     "cSpell.spellCheckDelayMs": 500,
     "cSpell.allowCompoundWords": true,
-    "cSpell.diagnosticLevel": "Hint",
     "cSpell.enableFiletypes": [
         "shellscript"
     ],
@@ -331,8 +330,16 @@
     "editor.renderWhitespace": "boundary",
     "python.interpreter.infoVisibility": "always",
     "python.defaultInterpreterPath": "~/.pyenv/versions/3.7.15/envs/tmp/lib/python3.7/site-packages/python",
-    "window.zoomLevel": 1,
     "notebook.output.textLineLimit": 1000,
+    "redhat.telemetry.enabled": false,
+    "gitblame.inlineMessageFormat": "${author.name}: ${commit.summary}",
+    "gitblame.inlineMessageNoCommit": "",
+    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago}):  ${commit.summary}",
+    "window.zoomLevel": 1,
+    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.userWords": [
+        "Unstash"
+    ],
     // 
     // 
     // ! vvv New Configs vvv

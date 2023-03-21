@@ -14,5 +14,23 @@
             "#endif /* __$0_H__ */"
         ],
         "description": "ifndef, define, endif"
+    },
+    "ifdef __cplusplus": {
+        "scope": "c, cpp",
+        "body": [
+            "#ifdef __cplusplus",
+            "$0",
+            "#endif /* __cplusplus */",
+        ],
+        "description": "ifndef, define, endif"
+    },
+    "def ifndef": {
+        "scope": "c, cpp",
+        "body": [
+            "#ifndef $0",
+            "#define $0",
+            "#endif /* $0 */",
+        ],
+        "description": "ifndef, define, endif"
     }
 }
