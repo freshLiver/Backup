@@ -108,6 +108,9 @@ source $ZSH/oh-my-zsh.sh
 command -v cls > /dev/null || alias cls="clear"
 command -v reboot > /dev/null || alias reboot="sudo reboot"
 
+# git
+alias gref="git reflog --date=iso"
+
 # softwares
 export PATH="$HOME/Dropbox/Softwares/bin:$HOME/.cargo/bin:$PATH"
 
