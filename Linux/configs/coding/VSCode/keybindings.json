@@ -138,5 +138,9 @@
         "key": "f3",
         "command": "editor.action.formatDocument.none",
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "workbench.files.action.showActiveFileInExplorer"
     }
 ]

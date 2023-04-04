@@ -32,5 +32,15 @@
             "#endif /* $0 */",
         ],
         "description": "ifndef, define, endif"
+    },
+    "ifdef DEBUG": {
+        "scope": "c, cpp",
+        "body": [
+            "#ifdef DEBUG",
+            "$0",
+            "#endif /* DEBUG */",
+        ],
+        "description": "ifdef DEBUG, endif"
     }
+
 }
