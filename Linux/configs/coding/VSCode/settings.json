@@ -24,12 +24,13 @@
     },
     "editor.matchBrackets": "always",
     // 
-    // * Guide/Indent/Hint/Suggestion
+    // * Editor Guide/Indent/Hint/Suggestion
     // 
     "editor.guides.indentation": true,
     "editor.inlayHints.enabled": "on",
     "editor.suggestSelection": "first",
     "editor.wrappingIndent": "indent",
+    "editor.renderWhitespace": "boundary",
     "editor.bracketPairColorization.enabled": true,
     // 
     // * Explorer/File/AutoSave/
@@ -187,6 +188,10 @@
     // * Git
     // 
     "git.autofetchPeriod": 1000,
+    "git.enableStatusBarSync": false,
+    "gitblame.inlineMessageFormat": "${author.name}: ${commit.summary}",
+    "gitblame.inlineMessageNoCommit": "",
+    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago}):  ${commit.summary}",
     // 
     // * cSpell Check
     // 
@@ -194,6 +199,10 @@
     "cSpell.allowCompoundWords": true,
     "cSpell.enableFiletypes": [
         "shellscript"
+    ],
+    "cSpell.diagnosticLevel": "Hint",
+    "cSpell.userWords": [
+        "Unstash"
     ],
     // 
     // * TODO Tree
@@ -292,18 +301,25 @@
     ],
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.venvPath": "~/venv/",
+    "python.interpreter.infoVisibility": "always",
+    "python.defaultInterpreterPath": "~/.pyenv/versions/tmp/lib/python3.7/site-packages/python",
     // 
     // ** ipynb
     // 
     "notebook.lineNumbers": "on",
+    "notebook.output.textLineLimit": 1000,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     // 
     // 
-    // * LaTeX
+    // * Markdown and LaTeX
     // 
     // 
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "markdown.extension.list.indentationSize": "inherit",
     "latex-workshop.bibtex-format.tab": "4 spaces",
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.view.pdf.viewer": "tab",
@@ -327,19 +343,8 @@
     "emmet.includeLanguages": {
         "liquid": "html"
     },
-    "editor.renderWhitespace": "boundary",
-    "python.interpreter.infoVisibility": "always",
-    "python.defaultInterpreterPath": "~/.pyenv/versions/3.7.15/envs/tmp/lib/python3.7/site-packages/python",
-    "notebook.output.textLineLimit": 1000,
     "redhat.telemetry.enabled": false,
-    "gitblame.inlineMessageFormat": "${author.name}: ${commit.summary}",
-    "gitblame.inlineMessageNoCommit": "",
-    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago}):  ${commit.summary}",
     "window.zoomLevel": 1,
-    "cSpell.diagnosticLevel": "Hint",
-    "cSpell.userWords": [
-        "Unstash"
-    ],
     // 
     // 
     // ! vvv New Configs vvv
