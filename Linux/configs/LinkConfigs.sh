@@ -46,12 +46,8 @@ ln -nsrf ./bat/ "$HOME_CONFIG"
 
 
 
-# fcitx5 themes -- whole directory
-FCITX5_THEME_DIR="$HOME_LOCAL_SHARE/fcitx5"
-mkdir -p "$FCITX5_THEME_DIR"
-
-ln -nsrf ./fcitx5/themes/ "$FCITX5_THEME_DIR"
-
+# fcitx5 themes
+bash -c "cd ./fcitx5/ && ./LinkConfig.sh"
 
 
 # polybar -- config.ini only
