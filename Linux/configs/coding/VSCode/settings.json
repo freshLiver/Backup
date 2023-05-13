@@ -54,6 +54,10 @@
         "**/*.xlxs": true,
         "**/*.gitignore": false,
         "**/*.gitattributes": true,
+        "**/.git": false,
+        "**/.git/hooks/*.sample": true,
+        "**/.git/{[A-Z_]*,config,index,description,packed-refs}": true,
+        "**/.git/{info,logs,refs,objects,modules,branches}": true,
     },
     // 
     // * Terminal
