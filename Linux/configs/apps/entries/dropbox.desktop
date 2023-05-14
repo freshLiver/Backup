@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Cloud;Sync;
+Exec=~/.dropbox-dist/dropboxd
+Icon=dropbox.svg
+Type=Application
+MimeType=
+Name=Dropbox
+GenericName=Cloud Sync
+StartupWMClass=dropbox
