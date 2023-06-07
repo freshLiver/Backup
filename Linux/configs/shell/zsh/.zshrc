@@ -121,6 +121,12 @@ command -v yt > /dev/null || alias yt="yt-dlp"
 command -v btop > /dev/null || alias btop="$HOME/Softwares/btop/bin/btop"
 command -v syslog > /dev/null || alias syslog="journalctl -f --no-hostname -o short-precise"
 
+if [[ -z "$(command -v help > /dev/null)" ]]; then
+    function help () {
+        bash -c "help $@"
+    }
+fi
+
 
 # python env
 export PYENV_ROOT="$HOME/.pyenv"
