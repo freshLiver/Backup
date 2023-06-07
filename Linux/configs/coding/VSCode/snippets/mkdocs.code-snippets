@@ -24,6 +24,28 @@
         ],
         "description": "Template for pages.yml"
     },
+    "Paper Template": {
+        "scope": "markdown",
+        "body": [
+            "---",
+            "tags: [Papers]",
+            "---\n",
+            "# $0\n",
+            "## Introduction\n",
+            "### Source\n",
+            "### Motivation\n",
+            "<!-- --------------------------------- --- --------------------------------- -->\n",
+            "## Design\n",
+            "<!-- --------------------------------- --- --------------------------------- -->\n",
+            "## Implementation\n",
+            "<!-- --------------------------------- --- --------------------------------- -->\n",
+            "## Evaluations\n",
+            "<!-- --------------------------------- --- --------------------------------- -->\n",
+            "## Critics\n",
+            "## References\n",
+        ],
+        "description": "Template for markdown notes"
+    },
     "Note Template": {
         "scope": "markdown",
         "body": [
