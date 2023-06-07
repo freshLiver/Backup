@@ -142,5 +142,9 @@
     {
         "key": "ctrl+2",
         "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "outline.focus"
     }
 ]
