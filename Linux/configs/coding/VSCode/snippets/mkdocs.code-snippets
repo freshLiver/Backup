@@ -15,16 +15,15 @@
     // 	],
     // 	"description": "Log output to console"
     // }
-    "Pages Template": {
+    "Template - pages.yml": {
         "scope": "yaml",
         "body": [
             "title: $0",
             "nav:",
             "\t- ..."
-        ],
-        "description": "Template for pages.yml"
+        ]
     },
-    "Paper Template": {
+    "Template - Paper Note": {
         "scope": "markdown",
         "body": [
             "---",
@@ -43,10 +42,9 @@
             "<!-- --------------------------------- --- --------------------------------- -->\n",
             "## Critics\n",
             "## References\n",
-        ],
-        "description": "Template for markdown notes"
+        ]
     },
-    "Note Template": {
+    "Template - General Note": {
         "scope": "markdown",
         "body": [
             "---",
@@ -54,15 +52,41 @@
             "---\n",
             "# $0\n",
             "## References\n",
-        ],
-        "description": "Template for markdown notes"
+        ]
     },
-    "Admonitions Snippet": {
+    "Admonitions - info": {
         "scope": "markdown",
         "body": [
             "!!! info",
             "\tcontent"
-        ],
-        "description": "Snippet for Mkdocs Admonitions"
+        ]
+    },
+    "Admonitions - tip": {
+        "scope": "markdown",
+        "body": [
+            "!!! tip",
+            "\tcontent"
+        ]
+    },
+    "Admonitions - todo": {
+        "scope": "markdown",
+        "body": [
+            "!!! todo",
+            "\tcontent"
+        ]
+    },
+    "Admonitions - warning": {
+        "scope": "markdown",
+        "body": [
+            "!!! warning",
+            "\tcontent"
+        ]
+    },
+    "Admonitions - example": {
+        "scope": "markdown",
+        "body": [
+            "!!! example",
+            "\tcontent"
+        ]
     }
 }
