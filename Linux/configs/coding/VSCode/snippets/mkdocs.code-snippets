@@ -41,7 +41,7 @@
             "## Evaluations\n",
             "<!-- --------------------------------- --- --------------------------------- -->\n",
             "## Critics\n",
-            "## References\n",
+            "## Further Reading\n",
         ]
     },
     "Template - General Note": {
@@ -54,39 +54,56 @@
             "## References\n",
         ]
     },
+    /* -------------------------------------------------------------------------- */
+    /*                               For Admonitions                              */
+    /* -------------------------------------------------------------------------- */
+    "Admonitions - example": {
+        "scope": "markdown",
+        "body": [
+            "!!! example \"$0\"",
+            "\tcontent"
+        ]
+    },
     "Admonitions - info": {
         "scope": "markdown",
         "body": [
-            "!!! info",
+            "!!! info \"$0\"",
+            "\tcontent"
+        ]
+    },
+    "Admonitions - note": {
+        "scope": "markdown",
+        "body": [
+            "!!! note \"$0\"",
+            "\tcontent"
+        ]
+    },
+    "Admonitions - question": {
+        "scope": "markdown",
+        "body": [
+            "!!! question \"$0 ?\"",
             "\tcontent"
         ]
     },
     "Admonitions - tip": {
         "scope": "markdown",
         "body": [
-            "!!! tip",
+            "!!! tip \"$0\"",
             "\tcontent"
         ]
     },
     "Admonitions - todo": {
         "scope": "markdown",
         "body": [
-            "!!! todo",
+            "!!! todo \"$0\"",
             "\tcontent"
         ]
     },
     "Admonitions - warning": {
         "scope": "markdown",
         "body": [
-            "!!! warning",
+            "!!! warning \"$0\"",
             "\tcontent"
         ]
     },
-    "Admonitions - example": {
-        "scope": "markdown",
-        "body": [
-            "!!! example",
-            "\tcontent"
-        ]
-    }
 }
