@@ -80,12 +80,20 @@ Plugin 'ervandew/supertab'
 
 
 " auto formatter
+
 Plugin 'rhysd/vim-clang-format'
 let g:clang_format#command = '/usr/bin/clang-format'
+
+set autoread " auto reload after changed
 
 autocmd FileType c,cpp nnoremap <F3> <Esc>:ClangFormat<CR>
 autocmd FileType c,cpp inoremap <F3> <Esc>:ClangFormat<CR>
 autocmd FileType c,cpp vnoremap <F3> <Esc><Esc>:ClangFormat<CR>
+
+autocmd FileType rust nnoremap <F3> <Esc>:w<CR>:!cargo fmt<CR>:redraw<CR>
+autocmd FileType rust inoremap <F3> <Esc>:w<CR>:!cargo fmt<CR>:redraw<CR>
+autocmd FileType rust vnoremap <F3> <Esc><Esc>:w<CR>:!cargo fmt<CR>:redraw<CR>
+
 
 " git
 Plugin 'airblade/vim-gitgutter'
