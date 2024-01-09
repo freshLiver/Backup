@@ -146,5 +146,10 @@
     {
         "key": "ctrl+3",
         "command": "outline.focus"
+    },
+    {
+        "key": "shift+capslock shift+capslock",
+        "command": "cursorHome",
+        "when": "textInputFocus"
     }
 ]
