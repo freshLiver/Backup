@@ -223,6 +223,8 @@
         "rulerColour": "#FFFF00",
     },
     "todo-tree.general.tags": [
+        "!!! todo",
+        "!!! bug",
         "TODO",
         "FIXME",
         "TEST",
@@ -231,6 +233,14 @@
     ],
     "todo-tree.highlights.customHighlight": {
         "BUG": {
+            "icon": "bug",
+            "type": "whole-line",
+            "foreground": "#c9c9c9",
+            "background": "#17d66a",
+            "rulerColour": "#17d66a",
+            "iconColour": "#17d66a"
+        },
+        "!!! bug": {
             "icon": "bug",
             "type": "whole-line",
             "foreground": "#c9c9c9",
@@ -261,7 +271,7 @@
             "background": "#17c6d6",
             "rulerColour": "#17c6d6",
             "iconColour": "#17c6d6"
-        }
+        },
     },
     // 
     // 
@@ -348,7 +358,8 @@
         "liquid": "html"
     },
     "redhat.telemetry.enabled": false,
-    "window.zoomLevel": 1,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.wrappingStrategy": "advanced",
     // 
     // 
     // ! vvv New Configs vvv
