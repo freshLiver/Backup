@@ -20,7 +20,7 @@
         "body": [
             "title: $0",
             "nav:",
-            "\t- ..."
+            "  - ..."
         ]
     },
     "Template - Paper Note": {
@@ -60,50 +60,43 @@
     "Admonitions - example": {
         "scope": "markdown",
         "body": [
-            "!!! example \"$0\"",
-            "\tcontent"
+            "!!! example \"$0\"\n    content",
         ]
     },
     "Admonitions - info": {
         "scope": "markdown",
         "body": [
-            "!!! info \"$0\"",
-            "\tcontent"
+            "!!! info \"$0\"\n    content",
         ]
     },
     "Admonitions - note": {
         "scope": "markdown",
         "body": [
-            "!!! note \"$0\"",
-            "\tcontent"
+            "!!! note \"$0\"\n    content",
         ]
     },
     "Admonitions - question": {
         "scope": "markdown",
         "body": [
-            "!!! question \"$0 ?\"",
-            "\tcontent"
+            "!!! question \"$0 ?\"\n    content",
         ]
     },
     "Admonitions - tip": {
         "scope": "markdown",
         "body": [
-            "!!! tip \"$0\"",
-            "\tcontent"
+            "!!! tip \"$0\"\n    content",
         ]
     },
     "Admonitions - todo": {
         "scope": "markdown",
         "body": [
-            "!!! todo \"$0\"",
-            "\tcontent"
+            "!!! todo \"$0\"\n    content",
         ]
     },
     "Admonitions - warning": {
         "scope": "markdown",
         "body": [
-            "!!! warning \"$0\"",
-            "\tcontent"
+            "!!! warning \"$0\"\n    content",
         ]
     },
 }
