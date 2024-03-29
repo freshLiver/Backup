@@ -107,9 +107,11 @@ source $ZSH/oh-my-zsh.sh
 
 command -v cls > /dev/null || alias cls="clear"
 command -v reboot > /dev/null || alias reboot="sudo reboot"
+command -v cd. > /dev/null || alias cd.="cd \$(realpath .)"
 
 # git
 alias gref="git reflog --date=iso"
+alias gssno="git status --short -uno"
 
 # softwares
 export PATH="$HOME/Dropbox/Softwares/bin:$HOME/.cargo/bin:$PATH"
