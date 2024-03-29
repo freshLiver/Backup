@@ -26,18 +26,23 @@
     // 
     // * Editor Guide/Indent/Hint/Suggestion
     // 
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.guides.indentation": true,
     "editor.inlayHints.enabled": "on",
     "editor.suggestSelection": "first",
     "editor.wrappingIndent": "indent",
     "editor.renderWhitespace": "boundary",
     "editor.bracketPairColorization.enabled": true,
+    "editor.wrappingStrategy": "advanced",
+    "editor.copyWithSyntaxHighlighting": false,
     // 
     // * Explorer/File/AutoSave/
     // 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.autoReveal": false,
+    "explorer.openEditors.visible": 1,
+    "explorer.openEditors.sortOrder": "alphabetical",
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
@@ -196,9 +201,11 @@
     "gitblame.inlineMessageFormat": "${author.name}: ${commit.summary}",
     "gitblame.inlineMessageNoCommit": "",
     "gitblame.statusBarMessageFormat": "${author.name} (${time.ago}):  ${commit.summary}",
+    "git.openRepositoryInParentFolders": "never",
     // 
     // * cSpell Check
     // 
+    "cSpell.maxNumberOfProblems": 1000,
     "cSpell.spellCheckDelayMs": 500,
     "cSpell.allowCompoundWords": true,
     "cSpell.enableFiletypes": [
@@ -235,7 +242,7 @@
         "BUG": {
             "icon": "bug",
             "type": "whole-line",
-            "foreground": "#c9c9c9",
+            "foreground": "#000000",
             "background": "#17d66a",
             "rulerColour": "#17d66a",
             "iconColour": "#17d66a"
@@ -243,15 +250,15 @@
         "!!! bug": {
             "icon": "bug",
             "type": "whole-line",
-            "foreground": "#c9c9c9",
-            "background": "#17d66a",
-            "rulerColour": "#17d66a",
-            "iconColour": "#17d66a"
+            "foreground": "#000000",
+            "background": "#d6174d",
+            "rulerColour": "#d6174d",
+            "iconColour": "#d6174d"
         },
         "FIXME": {
             "icon": "flame",
             "type": "whole-line",
-            "foreground": "#c9c9c9",
+            "foreground": "#000000",
             "background": "#d6174d",
             "rulerColour": "#d6174d",
             "iconColour": "#d6174d"
@@ -259,7 +266,7 @@
         "NOTE": {
             "icon": "bookmark",
             "type": "whole-line",
-            "foreground": "#c9c9c9",
+            "foreground": "#000000",
             "background": "#17c6d6",
             "rulerColour": "#17c6d6",
             "iconColour": "#17c6d6"
@@ -267,10 +274,18 @@
         "TEST": {
             "icon": "beaker",
             "type": "whole-line",
-            "foreground": "#c9c9c9",
+            "foreground": "#000000",
             "background": "#17c6d6",
             "rulerColour": "#17c6d6",
             "iconColour": "#17c6d6"
+        },
+        "TODO": {
+            "type": "whole-line",
+            "foreground": "#000000",
+        },
+        "!!! todo": {
+            "type": "whole-line",
+            "foreground": "#000000",
         },
     },
     // 
@@ -290,6 +305,9 @@
         "${default}"
     ],
     "C_Cpp.autoAddFileAssociations": false,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.onConfigChanged": "restart",
+    "cmake.showOptionsMovedNotification": false,
     // 
     // ** clang-format
     // 
@@ -358,8 +376,7 @@
         "liquid": "html"
     },
     "redhat.telemetry.enabled": false,
-    "git.openRepositoryInParentFolders": "never",
-    "editor.wrappingStrategy": "advanced",
+    "hediet.vscode-drawio.resizeImages": null,
     // 
     // 
     // ! vvv New Configs vvv
