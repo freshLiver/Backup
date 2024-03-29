@@ -14,7 +14,8 @@ TerminalColumns=110
 TerminalRows=30
 
 [Scrolling]
-HistoryMode=1
+HistoryMode=2
+HistorySize=5000
 
 [Terminal Features]
 UrlHintsModifiers=67108864
