@@ -1,5 +1,9 @@
-sh /home/freshliver/Dropbox/Backup/Linux/System/DownloadUploadSpeed.sh 1
-sh /home/freshliver/Dropbox/Backup/Linux/System/CPUUsage.sh 1
-sh /home/freshliver/Dropbox/Backup/Linux/System/CPUTemperature.sh 2
-sh /home/freshliver/Dropbox/Backup/Linux/System/KeyboardLockState.sh 1
-sh /home/freshliver/Dropbox/Backup/Linux/System/MemUsage.sh 1
+# install ifstat lm-sensors sysstat
+# jetbrains nerd font 14
+
+sh ~/Dropbox/Backup/Linux/scripts/DownloadUploadSpeed.sh 1
+sh ~/Dropbox/Backup/Linux/scripts/CPUUsage.sh 1
+echo "| `sh ~/Dropbox/Backup/Linux/scripts/CPUTemperature.sh 1`|"
+sh ~/Dropbox/Backup/Linux/scripts/KeyboardLockState.sh 1
+sh ~/Dropbox/Backup/Linux/scripts/MemUsage.sh 1
+
