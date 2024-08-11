@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+    <mime-type type="text/x-drawio">
+    <comment>Drawio File</comment>
+    <glob pattern="*.drawio"/>
+    </mime-type>
+</mime-info>
