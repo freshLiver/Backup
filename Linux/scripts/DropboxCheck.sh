@@ -4,6 +4,8 @@ if [ "$dropboxPID" = "" ]; then
     echo "Restart Dropbox !!"
     nohup $HOME/.dropbox-dist/dropboxd | systemd-cat &
 else
-    echo ""
+    dropbox stop
+    sleep 5
+    dropbox start
 fi
 
