@@ -1,43 +1,42 @@
 {
     //
-    //    
+    //
     //  ! Basic Configs
     //
     // * Tasks
-    // 
+    //
     "debug.onTaskErrors": "showErrors",
-    "editor.minimap.enabled": false,
     "update.mode": "manual",
     "update.showReleaseNotes": false,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "security.workspace.trust.untrustedFiles": "open",
     "search.showLineNumbers": true,
-    // 
+    //
     // * Font/Word/Bracket Configs
-    // 
+    //
     "editor.fontFamily": "'JetBrains Mono', 'FiraCode Nerd Font Mono', 'Ubuntu Mono', monospace",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
     "editor.wordWrap": "on",
     "editor.unicodeHighlight.allowedLocales": {
         "zh-hant": true
     },
     "editor.matchBrackets": "always",
-    // 
+    //
     // * Editor Guide/Indent/Hint/Suggestion
-    // 
+    //
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.guides.indentation": true,
-    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.enabled": "off",
     "editor.suggestSelection": "first",
     "editor.wrappingIndent": "indent",
     "editor.renderWhitespace": "boundary",
     "editor.bracketPairColorization.enabled": true,
     "editor.wrappingStrategy": "advanced",
     "editor.copyWithSyntaxHighlighting": false,
-    // 
+    //
     // * Explorer/File/AutoSave/
-    // 
+    //
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.autoReveal": false,
@@ -64,29 +63,28 @@
         "**/.git/{[A-Z_]*,config,index,description,packed-refs}": true,
         "**/.git/{info,logs,refs,objects,modules,branches}": true,
     },
-    // 
+    //
     // * Terminal
-    // 
+    //
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.tabs.location": "left",
-    // 
+    //
     // ! TODO
-    // 
+    //
     "workbench.sideBar.location": "right",
-    "window.menuBarVisibility": "hidden",
     "workbench.startupEditor": "newUntitledFile",
-    // 
-    // 
+    //
+    //
     // * Color & Icon Configs
-    // 
-    // 
+    //
+    //
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Atom One Light",
     "workbench.colorCustomizations": {
-        // 
+        //
         // ** 側欄相關
-        // 
+        //
         // "activityBar.background": "#6f727496",
         // "activityBar.foreground": "#ffffff",
         // "activityBarBadge.background": "#bb65c7",
@@ -95,88 +93,88 @@
         // "sideBar.border": "#e838ff",
         //
         // *** 側欄檔案樹相關
-        // 
+        //
         // "list.activeSelectionForeground": "#00ff6a",
         // "list.activeSelectionBackground": "#0bfff370",
         // "list.inactiveSelectionForeground": "#00ff6a",
         // "list.inactiveSelectionBackground": "#0bfff370",
         // "list.highlightForeground": "#b68fbb",
-        // 
+        //
         "tree.indentGuidesStroke": "#fe4b74",
-        // 
+        //
         // ** Menu 相關
-        // 
+        //
         // "menubar.selectionForeground": "#dddddd",
         // "menubar.selectionBackground": "#217e45",
         // "menu.selectionForeground": "#dddddd",
         // "menu.selectionBackground": "#217e45", // menu 下拉選單的碰到的的背景色
-        // 
+        //
         // ** 捲軸相關
-        // 
-        // "scrollbarSlider.activeBackground": "#00ff2a", // 點下去的顏色 
-        // "scrollbarSlider.hoverBackground": "#00ff2a6b", // 碰到的顏色 
+        //
+        // "scrollbarSlider.activeBackground": "#00ff2a", // 點下去的顏色
+        // "scrollbarSlider.hoverBackground": "#00ff2a6b", // 碰到的顏色
         // "scrollbarSlider.background": "#5ff17725", // 沒碰的顏色
-        // 
+        //
         // ** 分頁相關
-        // 
+        //
         // "tab.border": "#ffffff15", // tab 的分隔線
         // "tab.activeBackground": "#62626267",
         // "tab.activeForeground": "#ff9f32",
-        // "tab.activeBorder": "#00ff6a", // 當前 tab 的底線色 
+        // "tab.activeBorder": "#00ff6a", // 當前 tab 的底線色
         // "tab.inactiveForeground": "#ff9f32",
         // "tab.inactiveBackground": "#423f3f32",
         // "tab.unfocusedActiveForeground": "#ff9f32", // 非當前分割畫面的選中 tab 字色
         // "tab.unfocusedActiveBorder": "#00ff6a",
         // "tab.unfocusedInactiveForeground": "#ff9f32",
         // "tab.unfocusedActiveBackground": "#423f3f32",
-        // 
+        //
         // ** Panel 與 Terminal 相關
-        // 
+        //
         // "panel.border": "#e838ff",
         // "panelTitle.activeBorder": "#00ff6a",
         // "panelTitle.activeForeground": "#00ff6ade",
         // "panelTitle.inactiveForeground": "#b68fbb",
-        // 
+        //
         // "terminal.background": "#3b3d3d",
         // "terminal.foreground": "#07c300",
-        // 
+        //
         // ** Editor 相關
-        // 
+        //
         // "editor.wordHighlightStrongBackground": "#ce92ff48",
         // "editor.wordHighlightBackground": "#ff7b0038",
-        // 
+        //
         // "editor.findMatchBorder": "#00ff0000",
         // "editor.findMatchBackground": "#ff00009d",
-        // "editor.findMatchHighlightBackground": "#ff7b002a", // 其他符合的 high light 
-        // 
+        // "editor.findMatchHighlightBackground": "#ff7b002a", // 其他符合的 high light
+        //
         // "editor.selectionBackground": "#b7d6ba8d",
         // "editor.selectionHighlightBackground": "#0000004f",
         "editor.selectionHighlightBorder": "#FF0000",
-        // 
+        //
         // "editor.lineHighlightBackground": "#a6d2df1e",
-        // 
+        //
         // *** Indent 與 Line Number
-        // 
+        //
         "editorIndentGuide.activeBackground": "#fe4b74",
         // "editorIndentGuide.background": "#c5a8ca",
-        // 
+        //
         // "editorLineNumber.foreground": "#56e5f8",
         "editorLineNumber.activeForeground": "#fe4b74",
-        // 
+        //
         // *** Widgets
-        // 
+        //
         // "editorSuggestWidget.foreground": "#b68fbb",
         // "editorSuggestWidget.selectedBackground": "#ff880057",
-        // 
+        //
         // "editorWidget.resizeBorder": "#ff9f32",
         // "editorWidget.border": "#b68fbb",
-        // 
+        //
         // *** 超連結
-        // 
+        //
         // "textLink.foreground": "#00ccff", // 超連結的提示框的字色 https://google.com
-        // 
+        //
         // *** 其他
-        // 
+        //
         // "breadcrumb.activeSelectionForeground": "#b68fbb",
         // "notificationLink.foreground": "#b68fbb",
         // "pickerGroup.foreground": "#b68fbb",
@@ -186,25 +184,25 @@
         // "settings.headerForeground": "#b68fbb",
         // "statusBar.background": "#4391c5",
     },
-    // 
-    // 
+    //
+    //
     // ! Extension Configs
     //
     //
     "extensions.autoUpdate": false,
     "pasteImage.basePath": "${currentFileDir}/imgs",
-    // 
+    //
     // * Git
-    // 
+    //
     "git.autofetchPeriod": 1000,
     "git.enableStatusBarSync": false,
     "gitblame.inlineMessageFormat": "${author.name}: ${commit.summary}",
     "gitblame.inlineMessageNoCommit": "",
     "gitblame.statusBarMessageFormat": "${author.name} (${time.ago}):  ${commit.summary}",
     "git.openRepositoryInParentFolders": "never",
-    // 
+    //
     // * cSpell Check
-    // 
+    //
     "cSpell.maxNumberOfProblems": 1000,
     "cSpell.spellCheckDelayMs": 500,
     "cSpell.allowCompoundWords": true,
@@ -215,9 +213,9 @@
     "cSpell.userWords": [
         "Unstash"
     ],
-    // 
+    //
     // * TODO Tree
-    // 
+    //
     "todo-tree.tree.showScanModeButton": false,
     "todo-tree.highlights.highlightDelay": 100,
     "todo-tree.highlights.defaultHighlight": {
@@ -288,11 +286,11 @@
             "foreground": "#000000",
         },
     },
-    // 
-    // 
+    //
+    //
     // * C/CPP
-    // 
-    // 
+    //
+    //
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
@@ -307,22 +305,25 @@
     "C_Cpp.autoAddFileAssociations": false,
     "C_Cpp.intelliSenseEngine": "disabled",
     "clangd.onConfigChanged": "restart",
+    "clangd.arguments": [
+        "--header-insertion=never"
+    ],
     "cmake.showOptionsMovedNotification": false,
-    // 
+    //
     // ** clang-format
-    // 
+    //
     "C_Cpp.clang_format_path": "/usr/bin/clang-format",
     "clang-format.assumeFilename": ".clang-format",
     "clang-format.executable": "clang-format",
     "clang-format.language.c.style": "file",
     "clang-format.language.cpp.style": "file",
-    // 
-    // 
+    //
+    //
     // * Python
     //
-    // 
+    //
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
+        "editor.defaultFormatter": "ms-python.autopep8"
     },
     "python.analysis.cacheFolderPath": "/tmp",
     "python.formatting.provider": "autopep8",
@@ -335,19 +336,19 @@
     "python.venvPath": "~/venv/",
     "python.interpreter.infoVisibility": "always",
     "python.defaultInterpreterPath": "~/.pyenv/versions/tmp/lib/python3.7/site-packages/python",
-    // 
+    //
     // ** ipynb
-    // 
+    //
     "notebook.lineNumbers": "on",
     "notebook.output.textLineLimit": 1000,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
-    // 
-    // 
+    //
+    //
     // * Markdown and LaTeX
-    // 
-    // 
+    //
+    //
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
@@ -355,10 +356,10 @@
     "latex-workshop.bibtex-format.tab": "4 spaces",
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.view.pdf.viewer": "tab",
-    // 
-    // 
+    //
+    //
     // * Other Languages
-    // 
+    //
     //
     "[verilog]": {
         "editor.defaultFormatter": "ericsonj.verilogformat"
@@ -377,9 +378,34 @@
     },
     "redhat.telemetry.enabled": false,
     "hediet.vscode-drawio.resizeImages": null,
-    // 
-    // 
+    "clangd.path": "/home/hsi/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/18.1.3/clangd_18.1.3/bin/clangd",
+    "extensions.ignoreRecommendations": true,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.configureOnOpen": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "ShortcutMenuBar.goToDefinition": true,
+    "ShortcutMenuBar.userButton01Command": "editor.foldAllExcept",
+    "workbench.activityBar.location": "hidden",
+    "ShortcutMenuBar.openFilesList": false,
+    "ShortcutMenuBar.toggleTerminal": false,
+    "ShortcutMenuBar.toggleWordWrap": true,
+    "ShortcutMenuBar.beautify": false,
+    "window.customTitleBarVisibility": "auto",
+    "window.menuBarVisibility": "toggle",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "python.locator": "js",
+    //
+    //
     // ! vvv New Configs vvv
-    // 
-    // 
+    //
+    //
 }
