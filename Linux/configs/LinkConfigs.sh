@@ -73,6 +73,8 @@ cp -f ./latte/K21NB.layout.latte "$LATTE_CONFIG_DIR/K21NB.layout.latte"
 # rofi -- whole directory
 ln -nsrf ./rofi/ "$HOME_CONFIG"
 
+# goldendict
+ln -nsrf ./goldendict "$HOME_CONFIG"
 
 
 # deadbeef
