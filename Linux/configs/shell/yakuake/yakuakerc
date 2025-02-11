@@ -11,9 +11,11 @@ FirstRun=false
 detailViewIconSize=16
 
 [Shortcuts]
+close-active-terminal=none
 next-terminal=Ctrl+Shift+Down
 previous-terminal=Ctrl+Shift+Up
 
 [Window]
 DynamicTabTitles=true
-Height=94
+Height=95
+Width=95
