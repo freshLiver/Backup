@@ -118,10 +118,13 @@ export PATH="$HOME/Dropbox/Softwares/bin:$HOME/.cargo/bin:$PATH"
 
 command -v bat > /dev/null || alias bat="batcat"
 command -v batraw > /dev/null || alias batraw="bat --color=never --wrap=never"
-command -v tags > /dev/null || alias tags="tmsu"
-command -v yt > /dev/null || alias yt="yt-dlp"
 command -v btop > /dev/null || alias btop="$HOME/Softwares/btop/bin/btop"
 command -v syslog > /dev/null || alias syslog="journalctl -f --no-hostname -o short-precise"
+
+command -v yt > /dev/null || alias yt="yt-dlp"
+function yt-mpv() {
+    yt-dlp -o - $1 | mpv -
+}
 
 if [[ -z "$(command -v help > /dev/null)" ]]; then
     function help () {
