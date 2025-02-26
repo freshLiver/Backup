@@ -126,6 +126,14 @@ function yt-mpv() {
     yt-dlp -o - $1 | mpv -
 }
 
+function host-local-site() {
+    if [[ $# -ne 2 ]]; then
+        echo "Usage: $0 PATH PORT"
+    else
+        docker run --rm -v "$(realpath $1)":/usr/share/nginx/html:ro -dp $2:80 -it nginx
+    fi
+}
+
 if [[ -z "$(command -v help > /dev/null)" ]]; then
     function help () {
         bash -c "help $@"
