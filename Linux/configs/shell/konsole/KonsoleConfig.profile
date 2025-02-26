@@ -19,4 +19,4 @@ HistorySize=5000
 
 [Terminal Features]
 UrlHintsModifiers=67108864
-VerticalLine=true
+VerticalLine=false
