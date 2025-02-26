@@ -46,10 +46,15 @@ let g:minimap_toggle='<C-F11>'
 
 
 " autocompletion
-Plugin 'valloric/youcompleteme'
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+"Plugin 'valloric/youcompleteme'
+"let g:ycm_confirm_extra_conf = 0
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" fast comment
+Plugin 'scrooloose/nerdcommenter'
+let g:NERDSpaceDelims = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 """ clang
 "Plugin 'rip-rip/clang_complete'
@@ -160,6 +165,8 @@ set softtabstop=4                    "" Number of spaces per Tab
 """" Advanced
 set confirm                          "" Prompt confirmation dialogs
 set ruler                            "" Show row and column ruler information
+set colorcolumn=80
+highlight ColorColumn ctermbg=88 guibg=#870000
  
 set undolevels=1000                  "" Number of undo levels
 set backspace=indent,eol,start       "" Backspace behaviour
