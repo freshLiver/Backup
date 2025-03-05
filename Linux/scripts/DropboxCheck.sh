@@ -1,12 +1,13 @@
+#!/bin/bash
 dropboxPID="$(ps aux | grep dropbox | grep home | awk '{print $2}')"
 
 if [ "$dropboxPID" = "" ]; then
-    echo "Restart Dropbox !!"
-    $HOME/.dropbox-dist/dropboxd | systemd-cat &
-    disown
+    echo "Restart Dropbox !!" | tee >(systemd-cat)
+    $HOME/.dropbox-dist/dropboxd 2>&1 | systemd-cat &
+    disown | tee >(systemd-cat)
 else
-    dropbox stop
+    dropbox stop | tee >(systemd-cat)
     sleep 5
-    dropbox start
+    dropbox start | tee >(systemd-cat)
 fi
 
