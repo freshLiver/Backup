@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=AmazonMusic
+Comment=Launch with Steam
+Exec=steam steam://rungameid/11943788203162468352
+Icon=AmazonMusic.png
+Terminal=false
+Type=Application
+Categories=Music;Player;
