@@ -28,30 +28,18 @@ ln -srf ./shell/konsole/Breeze.colorscheme "$KONSOLE_CONFIG_DIR"
 ln -srf ./shell/konsole/Linux.colorscheme "$KONSOLE_CONFIG_DIR"
 ln -srf ./shell/konsole/KonsoleConfig.profile "$KONSOLE_CONFIG_DIR"
 
+# system configs
+bash -c "cd ./system/ && ./LinkSystemConfigs.sh"
 
 # coding configs
 bash -c "cd ./coding/ && ./LinkCodingConfigs.sh"
 
 
-
-# fcitx5 themes
-bash -c "cd ./fcitx5/ && ./LinkConfig.sh"
-
 # goldendict
 ln -nsrf ./goldendict "$HOME_CONFIG"
 
-
 # multimedia configs
 bash -c "cd ./media/ && ./LinkMediaConfigs.sh"
-
-# libinput-gesture
-ln -srf ./gesture/libinput-gestures.conf "$HOME_CONFIG/libinput-gestures.conf"
-
-echo "Restarting..."
-libinput-gestures-setup restart
-libinput-gestures-setup autostart start
-
-
 
 # desktop entries
 bash -c "cd ./apps/ && ./LinkApps.sh"
