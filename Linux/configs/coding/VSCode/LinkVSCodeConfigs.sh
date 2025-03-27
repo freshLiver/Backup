@@ -12,5 +12,3 @@ ln -srf ./keybindings.json "$VSCODE_CONFIG_HOME/"
 
 ln -srf ./snippets/c_cpp.code-snippets "$VSCODE_SNIPPET_HOME/"
 ln -srf ./snippets/mkdocs.code-snippets "$VSCODE_SNIPPET_HOME/"
-
-echo "done LinkVSCodeConfigs.sh!!"
