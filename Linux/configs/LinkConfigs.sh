@@ -15,6 +15,8 @@ bash -c "cd ./shell/ && ./LinkShellConfigs.sh"
 # coding configs
 bash -c "cd ./coding/ && ./LinkCodingConfigs.sh"
 
+# systemd-service configs
+bash -c "cd ./services/ && ./install-services.sh"
 
 # goldendict
 ln -nsrf ./goldendict "$HOME_CONFIG"

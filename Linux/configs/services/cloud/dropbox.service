@@ -1,0 +1,11 @@
+[Unit]
+Description=Dropbox client
+After=network.target
+
+[Service]
+ExecStart=/home/hsi/.dropbox-dist/dropboxd
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
