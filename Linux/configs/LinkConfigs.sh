@@ -33,10 +33,6 @@ ln -srf ./shell/konsole/KonsoleConfig.profile "$KONSOLE_CONFIG_DIR"
 bash -c "cd ./coding/ && ./LinkCodingConfigs.sh"
 
 
-# batcat -- whole directory
-ln -nsrf ./bat/ "$HOME_CONFIG"
-
-
 
 # fcitx5 themes
 bash -c "cd ./fcitx5/ && ./LinkConfig.sh"

@@ -11,3 +11,6 @@ mkdir -p "$VIM_THEME_DIR"
 
 ln -srf ./vim/.vimrc "$HOME/.vimrc"
 ln -nsrf ./vim/colors/ "$VIM_THEME_DIR"
+
+# batcat -- whole directory
+ln -nsrf ./bat/ "$HOME_CONFIG"
