@@ -127,10 +127,10 @@ function yt-mpv() {
 }
 
 function host-local-site() {
-    if [[ $# -ne 2 ]]; then
-        echo "Usage: $0 PATH PORT"
+    if [[ $# -ne 3 ]]; then
+        echo "Usage: $0 PATH PORT CONTAINER_NAME"
     else
-        docker run --rm -v "$(realpath $1)":/usr/share/nginx/html:ro -dp $2:80 -it nginx
+        docker run --restart=always --name=$3 -v "$(realpath $1)":/usr/share/nginx/html:ro -dp $2:80 -it nginx
     fi
 }
 
@@ -139,6 +139,17 @@ if [[ -z "$(command -v help > /dev/null)" ]]; then
         bash -c "help $@"
     }
 fi
+
+function set-proxy() {
+    if [[ $# -ne 1 ]]; then
+        echo "Usage: $0 HOST:PORT"
+    elif [[ -z "$1" ]]; then
+        unset http_proxy https_proxy
+    else
+        export http_proxy="http://$1"
+        export https_proxy="https://$1"
+    fi
+}
 
 
 # python env
