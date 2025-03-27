@@ -80,7 +80,7 @@
     //
     //
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Atom One Light",
+    "workbench.colorTheme": "Dracula Theme Soft",
     "workbench.colorCustomizations": {
         //
         // ** 側欄相關
@@ -400,9 +400,12 @@
         "*": false,
         "plaintext": false,
         "markdown": false,
-        "scminput": false
+        "scminput": false,
+        "c": true
     },
     "python.locator": "js",
+    "window.titleBarStyle": "native",
+    "github.copilot.selectedCompletionModel": "",
     //
     //
     // ! vvv New Configs vvv
