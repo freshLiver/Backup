@@ -18,11 +18,11 @@ bash -c "cd ./coding/ && ./LinkCodingConfigs.sh"
 # systemd-service configs
 bash -c "cd ./services/ && ./install-services.sh"
 
-# goldendict
-ln -nsrf ./goldendict "$HOME_CONFIG"
-
 # multimedia configs
 bash -c "cd ./media/ && ./LinkMediaConfigs.sh"
 
 # desktop entries
 bash -c "cd ./apps/ && ./LinkApps.sh"
+
+# utils
+bash -c "cd ./utils/ && ./LinkUtilsConfigs.sh"

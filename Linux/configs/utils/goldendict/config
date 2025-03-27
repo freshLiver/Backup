@@ -40,14 +40,14 @@
  </forvo>
  <mediawikis/>
  <websites>
-  <website inside_iframe="1" icon="" url="http://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/%GDWORD%" name="Cambridge" id="1a3e0d5fb0a23b3e2c05d459532abb9b" enabled="1"/>
-  <website inside_iframe="1" icon="" url="http://www.dictionary.com/browse/%GDWORD%" name="dictionary.com" id="05bf30af88da59bda32fd569388732e1" enabled="1"/>
+  <website inside_iframe="1" name="Cambridge" enabled="1" id="1a3e0d5fb0a23b3e2c05d459532abb9b" icon="" url="http://dictionary.cambridge.org/zht/詞典/英語-漢語-繁體/%GDWORD%"/>
+  <website inside_iframe="1" name="dictionary.com" enabled="1" id="05bf30af88da59bda32fd569388732e1" icon="" url="http://www.dictionary.com/browse/%GDWORD%"/>
  </websites>
  <dictservers/>
  <programs>
-  <program icon="" type="0" name="Festival" id="428b4c2b905ef568a43d9a16f59559b0" commandLine="festival --tts" enabled="0"/>
-  <program icon="" type="0" name="Espeak" id="2cf8b3a60f27e1ac812de0b57c148340" commandLine="espeak %GDWORD%" enabled="0"/>
-  <program icon="" type="2" name="Manpages" id="4f898f7582596cea518c6b0bfdceb8b3" commandLine="man -a --html=/bin/cat %GDWORD%" enabled="0"/>
+  <program type="0" name="Festival" enabled="0" id="428b4c2b905ef568a43d9a16f59559b0" commandLine="festival --tts" icon=""/>
+  <program type="0" name="Espeak" enabled="0" id="2cf8b3a60f27e1ac812de0b57c148340" commandLine="espeak %GDWORD%" icon=""/>
+  <program type="2" name="Manpages" enabled="0" id="4f898f7582596cea518c6b0bfdceb8b3" commandLine="man -a --html=/bin/cat %GDWORD%" icon=""/>
  </programs>
  <voiceEngines/>
  <mutedDictionaries/>
@@ -100,7 +100,7 @@
   <historyStoreInterval>0</historyStoreInterval>
   <favoritesStoreInterval>0</favoritesStoreInterval>
   <confirmFavoritesDeletion>1</confirmFavoritesDeletion>
-  <proxyserver useSystemProxy="0" enabled="0">
+  <proxyserver enabled="0" useSystemProxy="0">
    <type>0</type>
    <host></host>
    <port>3128</port>
@@ -144,11 +144,11 @@
  <lastMainGroupId>0</lastMainGroupId>
  <lastPopupGroupId>0</lastPopupGroupId>
  <popupWindowState>AAAA/wAAAAH9AAAAAAAAAgMAAAGTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAQAAAAEAAAAaAGQAaQBjAHQAaQBvAG4AYQByAHkAQgBhAHIDAAAAAP////8AAAAAAAAAAA==</popupWindowState>
- <popupWindowGeometry>AdnQywADAAAAAAiFAAAB+QAACrEAAAOLAAAIhQAAAfkAAAqxAAADiwAAAAAAAAAAB4AAAAiFAAAB+QAACrEAAAOL</popupWindowGeometry>
+ <popupWindowGeometry>AdnQywADAAAAAAVTAAAB+QAAB38AAAOLAAAFUwAAAfkAAAd/AAADiwAAAAAAAAAAB4AAAAVTAAAB+QAAB38AAAOL</popupWindowGeometry>
  <pinPopupWindow>0</pinPopupWindow>
  <popupWindowAlwaysOnTop>1</popupWindowAlwaysOnTop>
  <mainWindowState>AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAfsAAAAUAHMAZQBhAHIAYwBoAFAAYQBuAGUAAAAAAP////8AAACbAP///wAAAAEAAACqAAAC//wCAAAAA/sAAAASAGQAaQBjAHQAcwBQAGEAbgBlAQAAACoAAAD5AAAAbAD////7AAAAGgBmAGEAdgBvAHIAaQB0AGUAcwBQAGEAbgBlAQAAAScAAAEFAAAAbAD////7AAAAFgBoAGkAcwB0AG8AcgB5AFAAYQBuAGUBAAACMAAAAPkAAABsAP///wAAAnkAAAL/AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAG4AYQB2AFQAbwBvAGwAYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABoAZABpAGMAdABpAG8AbgBhAHIAeQBCAGEAcgEAAAIk/////wAAAAAAAAAA</mainWindowState>
- <mainWindowGeometry>AdnQywADAAAAAAeqAAAAdgAACtAAAAO7AAAHqgAAAJMAAArQAAADuwAAAAAAAAAAB4AAAAeqAAAAkwAACtAAAAO7</mainWindowGeometry>
+ <mainWindowGeometry>AdnQywADAAAAAARZAAAAkwAAB38AAAO7AAAEWQAAAJMAAAd/AAADuwAAAAAAAAAAB4AAAARZAAAAkwAAB38AAAO7</mainWindowGeometry>
  <helpWindowGeometry></helpWindowGeometry>
  <helpSplitterState></helpSplitterState>
  <dictInfoGeometry>AdnQywADAAAAAAfKAAABNwAACiEAAALGAAAHygAAATcAAAohAAACxgAAAAAAAAAAB4AAAAfKAAABNwAACiEAAALG</dictInfoGeometry>
