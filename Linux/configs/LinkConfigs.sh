@@ -45,13 +45,8 @@ bash -c "cd ./fcitx5/ && ./LinkConfig.sh"
 ln -nsrf ./goldendict "$HOME_CONFIG"
 
 
-# deadbeef
-ln -nsrf ./deadbeef/ "$HOME_CONFIG"
-
-# mpv -- whole directory
-ln -nsrf ./mpv/ "$HOME_CONFIG"
-
-
+# multimedia configs
+bash -c "cd ./media/ && ./LinkMediaConfigs.sh"
 
 # libinput-gesture
 ln -srf ./gesture/libinput-gestures.conf "$HOME_CONFIG/libinput-gestures.conf"

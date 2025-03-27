@@ -1,3 +1,7 @@
+ape.strip_apev2 0
+ape.strip_id3v2 0
+ape.write_apev2 1
+ape.write_id3v2 0
 artwork.cache.expiration_time 0.000000
 artwork.cache.simplified 1
 artwork.cache_reset_time 0
@@ -23,14 +27,17 @@ cli_add_playlist_name Default
 close_send_to_tray 1
 converter.bypass_same_format 0
 converter.dsp_preset -1
-converter.encoder_preset 8
-converter.output_file_tf 
-converter.output_folder /home/freshliver/Dropbox/Digital/Playlists/
+converter.encoder_preset 4
+converter.lastdir file:///home/freshliver/Dropbox/Media/TODO/decompressed/_WAV/%5BSMEE%5D%20%E3%83%95%E3%83%AC%E3%83%A9%E3%83%90%20%E3%83%9F%E3%83%8B%E3%83%95%E3%82%A1%E3%83%B3%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%EF%BC%86%E3%83%95%E3%83%AB%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%20%5BWAV+FLAC%5D/FLAC/DISC%202
+converter.output_file_tf ../FLAC/DISC 2/%filename%
+converter.output_folder /home/freshliver
 converter.output_format 0
-converter.overwrite_action 0
-converter.write_to_source_folder 0
+converter.overwrite_action 1
+converter.preserve_folder_structure 1
+converter.write_to_source_folder 1
 deadbeef_version 1.9.5
-filechooser.lastdir file:///home/freshliver/Dropbox/Videos
+filechooser.lastdir file:///home/freshliver/Dropbox/Media/V
+filechooser.playlist.lastdir file:///home/freshliver/Dropbox/Softwares/app/deadbeef
 gtkui.action_separators 0
 gtkui.autoresize_columns 1
 gtkui.color.listview_column_text 65535 65535 65535
@@ -42,14 +49,14 @@ gtkui.color.listview_selected_text 65535 30840 0
 gtkui.color.listview_selection 17807 19544 25625
 gtkui.color.tabstrip_playing_text 65535 30840 0
 gtkui.color.tabstrip_selected_text 65535 65535 65535
-gtkui.columns.playlist [{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"516","align":"0","color_override":"0","color":"#ff000000"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"325","align":"0","color_override":"0","color":"#ffffffff"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"306","align":"0","color_override":"0","color":"#ffffffff"},{"title":"Year","id":"-1","format":"%year%","sort_format":"","size":"134","align":"0","color_override":"0","color":"#ffffffff"},{"title":"Time","id":"-1","format":"%length%","sort_format":"","size":"99","align":"0","color_override":"0","color":"#ff000000"}]
+gtkui.columns.playlist [{"title":"Track Number","id":"-1","format":"%tracknumber%","sort_format":"","size":"148","align":"0","color_override":"0","color":"#ffffffff"},{"title":"Artist","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)","sort_format":"","size":"393","align":"0","color_override":"0","color":"#ffffffff"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"328","align":"0","color_override":"0","color":"#ff000000"},{"title":"Album","id":"-1","format":"%album%","sort_format":"","size":"399","align":"0","color_override":"0","color":"#ffffffff"},{"title":"Year","id":"-1","format":"%year%","sort_format":"","size":"88","align":"0","color_override":"0","color":"#ffffffff"},{"title":"Time","id":"-1","format":"%length%","sort_format":"","size":"67","align":"0","color_override":"0","color":"#ff000000"}]
 gtkui.columns.search [{"title":"Artist / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"50","align":"1","color_override":"0","color":"#ff000000"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"}]
 gtkui.custom_tray_icon deadbeef-panel
 gtkui.delete_files_ask 1
 gtkui.disable_seekbar_overlay 0
 gtkui.embolden_current_track 1
 gtkui.hide_remove_from_disk 1
-gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.038348 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.127206 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.886537 pos=0 size2=0","children":[{"type":"seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.663971 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.711838 pos=0 size2=0","children":[{"type":"tabbed_playlist","legacy_params":" hideheaders=0 width=904"},{"type":"vsplitter","legacy_params":" locked=0 ratio=0.000000 pos=0 size2=0","children":[{"type":"quick_search","legacy_params":""},{"type":"musical_spectrum"}]}]},{"type":"vsplitter","legacy_params":" locked=0 ratio=0.599688 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.039443 pos=0 size2=0","children":[{"type":"playback_order"},{"type":"tabs","settings":{"active":"1","num_tabs":"2","tab000":"Selection properties","tab001":"Log viewer"},"children":[{"type":"selproperties","settings":{"section":"properties,metadata","showheaders":"0"}},{"type":"logviewer"}]}]},{"type":"coverart","settings":{"mode":"selected"}}]}]}]}
+gtkui.layout.1.9.0 {"type":"vsplitter","legacy_params":" locked=0 ratio=0.047475 pos=0 size2=0","children":[{"type":"hsplitter","legacy_params":" locked=0 ratio=0.082813 pos=0 size2=0","children":[{"type":"playtb"},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.901994 pos=0 size2=0","children":[{"type":"waveform_seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]}]},{"type":"hsplitter","legacy_params":" locked=0 ratio=0.748193 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.679128 pos=0 size2=0","children":[{"type":"tabbed_playlist","legacy_params":" hideheaders=0 width=719"},{"type":"vsplitter","legacy_params":" locked=0 ratio=0.000000 pos=0 size2=0","children":[{"type":"quick_search","legacy_params":""},{"type":"musical_spectrum"}]}]},{"type":"vsplitter","legacy_params":" locked=0 ratio=0.556075 pos=0 size2=0","children":[{"type":"vsplitter","legacy_params":" locked=0 ratio=0.039443 pos=0 size2=0","children":[{"type":"playback_order"},{"type":"tabs","settings":{"active":"0","num_tabs":"2","tab000":"Selection properties","tab001":"Log viewer"},"children":[{"type":"selproperties","settings":{"section":"properties,metadata","showheaders":"0"}},{"type":"logviewer"}]}]},{"type":"coverart","settings":{"mode":"selected"}}]}]}]}
 gtkui.mmb_delete_playlist 0
 gtkui.override_listview_colors 1
 gtkui.override_tabstrip_colors 1
@@ -104,11 +111,19 @@ hotkeys_created 1
 junk.enable_cp1251_detection 0
 junk.enable_cp936_detection 1
 junk.enable_shift_jis_detection 1
-mainwin.geometry.h 468
+mainwin.geometry.h 473
 mainwin.geometry.maximized 1
-mainwin.geometry.w 906
-mainwin.geometry.x 2144
-mainwin.geometry.y 22
+mainwin.geometry.w 960
+mainwin.geometry.x 0
+mainwin.geometry.y 0
+mp3.id3v1_encoding iso8859-1
+mp3.id3v2_version 3
+mp3.strip_apev2 0
+mp3.strip_id3v1 0
+mp3.strip_id3v2 0
+mp3.write_apev2 0
+mp3.write_id3v1 1
+mp3.write_id3v2 1
 mpris2.previous_action 0
 musical_spectrum.alignment 2
 musical_spectrum.amp_max 0
@@ -169,26 +184,26 @@ notify.albumart_size 64
 notify.enable 1
 notify.format_content_tf %artist% - %album%
 notify.format_title_tf %title%
-output_plugin alsa
-playback.loop 2
-playback.order 2
-playback.volume.normalized 0.2818383
+output_plugin pulseaudio
+playback.loop 0
+playback.order 0
+playback.volume.normalized 0.1333521
 playback_status.format.00 <span foreground='grey' weight='bold' size='medium'>%playback_time% / %length%</span>
 playback_status.num_lines 1
 playback_status.refresh_interval 100
 playlist.current 1
-playlist.cursor.0 3
-playlist.cursor.1 6
-playlist.cursor.2 -1
-playlist.cursor.3 0
-playlist.cursor.4 0
-playlist.cursor.5 0
-playlist.cursor.6 0
+playlist.cursor.0 11
+playlist.cursor.1 18
+playlist.cursor.2 0
+playlist.cursor.3 -1
+playlist.cursor.4 -1
+playlist.cursor.5 2
+playlist.cursor.6 2
 playlist.cursor.7 0
 playlist.cursor.8 0
 playlist.groups.spacing 0
-playlist.scroll.0 782
-playlist.scroll.1 -6
+playlist.scroll.0 184
+playlist.scroll.1 111
 playlist.scroll.2 0
 playlist.scroll.3 0
 playlist.scroll.4 0
@@ -199,23 +214,22 @@ playlist.scroll.8 0
 playlist.scroll.cursorfollowplayback 1
 playlist.stop_after_current 0
 playlist.stop_after_current_reset 1
-playlist.tab.00000 Vocal
-playlist.tab.00001 Sleep
-playlist.tab.00002 New
-playlist.tab.00003 New Playlist (1)
+playlist.tab.00000 Sleep
+playlist.tab.00001 Vocals
+playlist.tab.00002 CVT
 prefwin.geometry.h 592
 prefwin.geometry.w 889
-prefwin.geometry.x 471
-prefwin.geometry.y 147
+prefwin.geometry.x 233
+prefwin.geometry.y 85
 quick_search.append_search_string 1
 quick_search.history_size 5.000000
 quick_search.search_in 0
 replaygain.processing_flags 3
 replaygain_mode 2
-resume.paused 0
+resume.paused 1
 resume.playlist 1
-resume.position 0.0426667
-resume.track 13
+resume.position 56.419391
+resume.track 17
 resume_last_session 0
 rg_control.order_linear 2
 rg_control.order_random 2
@@ -231,8 +245,8 @@ streamer.samplerate_mult_48 48000
 trkproperties.geometry.h 400
 trkproperties.geometry.maximized 0
 trkproperties.geometry.w 617
-trkproperties.geometry.x 183
-trkproperties.geometry.y 118
+trkproperties.geometry.x 106
+trkproperties.geometry.y 20
 waveform.bg_alpha 65535
 waveform.bg_color_b 50000
 waveform.bg_color_g 50000
@@ -269,3 +283,7 @@ waveform.rlr_color_r 0
 waveform.scroll_enabled 1
 waveform.shade_waveform 1
 waveform.soundcloud_style 0
+wv.strip_apev2 0
+wv.strip_id3v1 0
+wv.write_apev2 1
+wv.write_id3v1 0
