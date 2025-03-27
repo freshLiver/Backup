@@ -1,9 +1,0 @@
-# install ifstat lm-sensors sysstat
-# jetbrains nerd font 14
-
-sh ~/Dropbox/Backup/Linux/scripts/DownloadUploadSpeed.sh 1
-sh ~/Dropbox/Backup/Linux/scripts/CPUUsage.sh 1
-echo "| `sh ~/Dropbox/Backup/Linux/scripts/CPUTemperature.sh 1`|"
-sh ~/Dropbox/Backup/Linux/scripts/KeyboardLockState.sh 1
-sh ~/Dropbox/Backup/Linux/scripts/MemUsage.sh 1
-

@@ -1,1 +1,0 @@
-clipboard/show-trans-in-tw.sh
