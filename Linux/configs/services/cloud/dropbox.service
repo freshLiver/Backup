@@ -3,7 +3,7 @@ Description=Dropbox client
 After=network.target
 
 [Service]
-ExecStart=/home/hsi/.dropbox-dist/dropboxd
+ExecStart=%h/.dropbox-dist/dropboxd
 Restart=always
 RestartSec=5
 
