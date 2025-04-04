@@ -1,8 +1,7 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=AmazonMusic
-Comment=Launch with Steam
-Exec=steam steam://rungameid/11943788203162468352
+Comment=Launch with Steam Proton
+Exec=~/Dropbox/Softwares/bin/proton_run 2780879895 "Amazon Music/Amazon Music.exe"
 Icon=AmazonMusic.png
 Terminal=false
 Type=Application
