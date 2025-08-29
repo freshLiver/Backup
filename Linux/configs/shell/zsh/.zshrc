@@ -105,59 +105,28 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-command -v cls > /dev/null || alias cls="clear"
-command -v reboot > /dev/null || alias reboot="sudo reboot"
-command -v cd. > /dev/null || alias cd.="cd \$(realpath .)"
-
-# git
-alias gref="git reflog --date=iso"
-alias gssno="git status --short -uno"
-
 # softwares
 export PATH="$HOME/Dropbox/Softwares/bin:$HOME/.cargo/bin:$PATH"
 
+command -v cls > /dev/null || alias cls="clear"
+command -v reboot > /dev/null || alias reboot="sudo reboot"
 command -v bat > /dev/null || alias bat="batcat"
 command -v batraw > /dev/null || alias batraw="bat --color=never --wrap=never"
 command -v btop > /dev/null || alias btop="$HOME/Softwares/btop/bin/btop"
 command -v syslog > /dev/null || alias syslog="journalctl -f --no-hostname -o short-precise"
 
-command -v yt > /dev/null || alias yt="yt-dlp"
-function yt-mpv() {
-    yt-dlp -o - $1 | mpv -
-}
+MY_SNIPPETS_HOME="$HOME/Dropbox/Backup/Linux/configs/shell/snippets"
+MY_SNIPPETS=(fzf video-utils network git pyenv)
 
-function host-local-site() {
-    if [[ $# -ne 3 ]]; then
-        echo "Usage: $0 PATH PORT CONTAINER_NAME"
-    else
-        docker run --restart=always --name=$3 -v "$(realpath $1)":/usr/share/nginx/html:ro -dp $2:80 -it nginx
+echo "Loading my snippets: ${MY_SNIPPETS[@]}"
+for my_snippet in "${MY_SNIPPETS[@]}"; do
+    if [[ -e "$MY_SNIPPETS_HOME/$my_snippet.sh" ]]; then
+        source "$MY_SNIPPETS_HOME/$my_snippet.sh"
+        if [[ $? -ne 0 ]]; then
+            echo "Load $my_snippet Failed ..."
+        fi
     fi
-}
-
-if [[ -z "$(command -v help > /dev/null)" ]]; then
-    function help () {
-        bash -c "help $@"
-    }
-fi
-
-function set-proxy() {
-    if [[ $# -ne 1 ]]; then
-        echo "Usage: $0 HOST:PORT"
-    elif [[ -z "$1" ]]; then
-        unset http_proxy https_proxy
-    else
-        export http_proxy="http://$1"
-        export https_proxy="https://$1"
-    fi
-}
-
-
-# python env
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+done
 
 
 # rclone default configs
@@ -169,3 +138,4 @@ export RCLONE_CACHE_WORKERS=16
 . $HOME/.oh-my-zsh/plugins/suse/suse.plugin.zsh
 . $HOME/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 . $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+. $HOME/.oh-my-zsh/plugins/fzf/fzf.plugin.zsh
