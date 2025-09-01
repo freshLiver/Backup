@@ -116,7 +116,7 @@ command -v btop > /dev/null || alias btop="$HOME/Softwares/btop/bin/btop"
 command -v syslog > /dev/null || alias syslog="journalctl -f --no-hostname -o short-precise"
 
 MY_SNIPPETS_HOME="$HOME/Dropbox/Backup/Linux/configs/shell/snippets"
-MY_SNIPPETS=(fzf video-utils network git pyenv)
+MY_SNIPPETS=(fzf video-utils network git pyenv ebook)
 
 echo "Loading my snippets: ${MY_SNIPPETS[@]}"
 for my_snippet in "${MY_SNIPPETS[@]}"; do
