@@ -12,7 +12,7 @@ function conv2webm () {
 
     ext=$ext \
     find . -type f -name "*.$ext" -exec \
-        bash -c 'name=$(basename "{}" .$ext); ffmpeg -i "$ext/$name.$ext" -c:v libvpx-vp9 -crf 30 -b:v 0 -cpu-used 8 -c:a libopus "$name.webm"' \
+        bash -c 'name=$(basename "{}" .$ext); ffmpeg -i "$ext/$name.$ext" -c:v libvpx-vp9 -crf 30 -b:v 0 -cpu-used 4 -c:a libopus "$name.webm"' \
         \;
 }
 

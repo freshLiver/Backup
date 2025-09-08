@@ -118,15 +118,18 @@ command -v syslog > /dev/null || alias syslog="journalctl -f --no-hostname -o sh
 MY_SNIPPETS_HOME="$HOME/Dropbox/Backup/Linux/configs/shell/snippets"
 MY_SNIPPETS=(fzf video-utils network git pyenv ebook)
 
-echo "Loading my snippets: ${MY_SNIPPETS[@]}"
-for my_snippet in "${MY_SNIPPETS[@]}"; do
-    if [[ -e "$MY_SNIPPETS_HOME/$my_snippet.sh" ]]; then
-        source "$MY_SNIPPETS_HOME/$my_snippet.sh"
-        if [[ $? -ne 0 ]]; then
-            echo "Load $my_snippet Failed ..."
+function reload_snippets() {
+    echo "Loading my snippets: ${MY_SNIPPETS[@]}"
+    for my_snippet in "${MY_SNIPPETS[@]}"; do
+        if [[ -e "$MY_SNIPPETS_HOME/$my_snippet.sh" ]]; then
+            source "$MY_SNIPPETS_HOME/$my_snippet.sh"
+            if [[ $? -ne 0 ]]; then
+                echo "Load $my_snippet Failed ..."
+            fi
         fi
-    fi
-done
+    done
+}
+reload_snippets
 
 
 # rclone default configs
