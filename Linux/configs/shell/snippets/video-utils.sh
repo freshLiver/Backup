@@ -7,12 +7,17 @@ function conv2webm () {
     fi
 
     ext=$1
+    out=${2:-done}
 
     mkdir $ext && mv *.$ext $ext
+    mkdir $out
 
-    ext=$ext \
+    ext=$ext out=$out \
     find . -type f -name "*.$ext" -exec \
-        bash -c 'name=$(basename "{}" .$ext); ffmpeg -i "$ext/$name.$ext" -c:v libvpx-vp9 -crf 30 -b:v 0 -cpu-used 4 -c:a libopus "$name.webm"' \
+        bash -c '''
+                name=$(basename "{}" .$ext); 
+                ffmpeg -i "$ext/$name.$ext" -c:v libvpx-vp9 -crf 30 -b:v 0 -cpu-used 4 -c:a libopus "$out/$name.webm" && mv "$ext/$name.$ext" $out
+                ''' \
         \;
 }
 
@@ -56,3 +61,33 @@ function check_pts() {
     done
 }
 
+function checkm3u8 () {
+    src="$(realpath $1)"
+    
+    ts_files=($(grep ".ts" "$src"))
+
+    echo "Checking files in .m3u8 ..."
+    for f in "${ts_files[@]}"; do
+        if [[ ! -e $f ]]; then
+            echo "file '$f' not exist...."
+            return 1
+        fi
+    done
+}
+
+function convm3u8 () {
+    src="$(realpath $1)"
+    ext="${2:-webm}"
+    dst="${3:-out}"
+
+    dirpath="$(dirname $src)"
+    dstname="$(basename $dirpath)"
+
+    checkm3u8 "$src"
+    if [[ $? -eq 0 ]]; then
+        mkdir -p "$dst"
+        echo "Merging $dstname ..."
+        ffmpeg -allowed_extensions ts,m3u8key -v warning -i "$src" "$dst/$dstname.$ext"
+    fi
+
+}

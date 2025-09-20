@@ -1,6 +1,6 @@
 #!/bin/bash
 
-alias fzf='fzf --walker-skip="$(cat $HOME/.fzfignore 2>/dev/null)"'
+alias fzf='fzf --walker-skip="$(cat $HOME/.fzfignore 2>/dev/null)" --no-sort'
 
 function fzfd () {
     fzf --walker=dir
@@ -13,7 +13,7 @@ function ffzf () {
     find $@ | fzf
 }
 function ffcd () {
-    cd $(find -type d $@ | fzf)
+    cd $(find $@ -type d | fzf)
 }
 function fzfq () {
     fzf --query "$1"

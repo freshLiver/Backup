@@ -28,7 +28,7 @@ function html_fix_size() {
     HHHH=$(grep -m1 -oP '<svg.*viewBox="0 0 \d+ \d+' $INDEX_FILE | rev | cut -d ' ' -f1 | rev)
     WWWW=$(grep -m1 -oP '<svg.*viewBox="0 0 \d+ \d+' $INDEX_FILE | rev | cut -d ' ' -f2 | rev)
 
-    echo "Set page size: @page {\n\tsize: ${WWWW}pt ${HHHH}pt;\n\tmargin: 0cm;\n"
+    echo "Set page size: @page {\n\tsize: ${WWWW}pt ${HHHH}pt;\n\tmargin: 0cm;\n}"
     echo -e "@page {\n\tsize: ${WWWW}pt ${HHHH}pt;\n\tmargin: 0cm;\n}" >> "$CSS_FILE"
 }
 
@@ -70,4 +70,26 @@ function epub2pdf4manga () {
     done
 }
 
+function imgs2pdf () {
+    find . -mindepth 1 -type d \
+        -exec echo "==== ${FUNCNAME:-${funcstack[1]}} :: Converting '{}' ..." \; \
+        -exec bash -c "tmp=\$(echo '{}' | cut -c3-) && convert \"\${tmp}\"/* \"\${tmp}.pdf\"" \;
+}
 
+function htmls2pdf() {
+    title="$1"
+    style="$2"
+    shift 2
+
+    mkdir out
+
+    echo "$(cat $style)" > out/tmp-merged.html
+    for dir in "$@"; do
+        files=($(ls -v "$dir"))
+        for f in "${files[@]}" ; do
+            name="${$(basename $f)/%.html}"
+            cat <(echo "<h1>$name</h1>") "$dir/$f" >> out/tmp-merged.html
+        done
+    done
+    pandoc out/tmp-merged.html -o out/book.epub --metadata title="$title"
+}
