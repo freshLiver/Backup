@@ -63,31 +63,48 @@ function check_pts() {
 
 function m3u8check () {
     src="$(realpath $1)"
+    srcdir="$(dirname $src)"
     
     ts_files=($(grep ".ts" "$src"))
 
     echo "Checking files in .m3u8 ..."
     for f in "${ts_files[@]}"; do
-        if [[ ! -e $f ]]; then
-            echo "file '$f' not exist...."
+        if [[ ! -e "$srcdir/$f" ]]; then
+            echo "file '$srcdir/$f' not exist...."
             return 1
         fi
     done
 }
 
 function m3u8merge () {
-    src="$(realpath $1)"
-    ext="${2:-webm}"
-    dst="${3:-out}"
+    ext="${1}"
+    dst="${2}"
+    shift 2
 
-    dirpath="$(dirname $src)"
-    dstname="$(basename $dirpath)"
+    for f in "$@"; do
+        src="$(realpath $f)"
+        dirpath="$(dirname $src)"
+        dstname="$(basename $dirpath)"
 
-    m3u8check "$src"
-    if [[ $? -eq 0 ]]; then
-        mkdir -p "$dst"
-        echo "Merging $dstname ..."
-        ffmpeg -allowed_extensions ts,m3u8key -v warning -i "$src" "$dst/$dstname.$ext"
-    fi
+        m3u8check "$src"
+        if [[ $? -eq 0 ]]; then
+            mkdir -p "$dst"
+            echo "Merging $dstname ..."
+            ffmpeg -allowed_extensions ts,m3u8key -v warning -i "$src" -c copy "$dst/$dstname.$ext"
+
+            if [[ $? -eq 0 ]]; then
+                echo "Checking PTS jump..."
+                check_pts "$dst/$dstname.$ext"
+
+                if [[ $? -ne 0 ]]; then
+                    return 1
+                fi
+            else
+                return 1
+            fi
+        else
+            return 1
+        fi
+    done
 
 }
