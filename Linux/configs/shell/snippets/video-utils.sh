@@ -61,7 +61,7 @@ function check_pts() {
     done
 }
 
-function checkm3u8 () {
+function m3u8check () {
     src="$(realpath $1)"
     
     ts_files=($(grep ".ts" "$src"))
@@ -75,7 +75,7 @@ function checkm3u8 () {
     done
 }
 
-function convm3u8 () {
+function m3u8merge () {
     src="$(realpath $1)"
     ext="${2:-webm}"
     dst="${3:-out}"
@@ -83,7 +83,7 @@ function convm3u8 () {
     dirpath="$(dirname $src)"
     dstname="$(basename $dirpath)"
 
-    checkm3u8 "$src"
+    m3u8check "$src"
     if [[ $? -eq 0 ]]; then
         mkdir -p "$dst"
         echo "Merging $dstname ..."
