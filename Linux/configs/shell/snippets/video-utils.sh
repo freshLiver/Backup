@@ -62,17 +62,37 @@ function check_pts() {
 }
 
 function m3u8check () {
-    src="$(realpath $1)"
-    srcdir="$(dirname $src)"
-    
-    ts_files=($(grep ".ts" "$src"))
 
-    echo "Checking files in .m3u8 ..."
-    for f in "${ts_files[@]}"; do
-        if [[ ! -e "$srcdir/$f" ]]; then
-            echo "file '$srcdir/$f' not exist...."
-            return 1
+    for src in "$@"; do
+        key="$(cat $src | grep -oE 'URI=.*\.m3u8key' | cut -d'"' -f2)"
+        srcdir="$(dirname $src)"
+        
+        if [[ -z "$srcdir/$key" ]]; then
+            echo "WARN: Not encrypted, decryption checks will be skipped"
         fi
+
+        ts_files=($(grep ".ts" "$src"))
+
+        echo "Checking files in $src (key=$srcdir/$key) ..."
+        cnt=-1
+        for f in "${ts_files[@]}"; do
+            cnt=$(($cnt + 1))
+
+            # simple check
+            if [[ ! -e "$srcdir/$f" || ! -s "$srcdir/$f" ]]; then
+                echo "file '$srcdir/$f' not exist or size == 0 ..."
+                return 1
+            fi
+
+            # try decrypt
+            if [[ ! -z "$key" ]]; then
+                openssl aes-128-cbc -d -in "$srcdir/$f" -K "$(xxd -p $srcdir/$key)" -iv "$(printf "%032x" $cnt)" -out /dev/null
+                if [[ $? -ne 0 ]]; then
+                    echo "AES Decryption failed on $f ..."
+                    return 1
+                fi
+            fi
+        done
     done
 }
 
@@ -82,27 +102,28 @@ function m3u8merge () {
     shift 2
 
     for f in "$@"; do
-        src="$(realpath $f)"
+        src=$(realpath $f)
         dirpath="$(dirname $src)"
         dstname="$(basename $dirpath)"
 
-        m3u8check "$src"
-        if [[ $? -eq 0 ]]; then
-            mkdir -p "$dst"
-            echo "Merging $dstname ..."
-            ffmpeg -allowed_extensions ts,m3u8key -v warning -i "$src" -c copy "$dst/$dstname.$ext"
+        m3u8check "$f"
+        if [[ $? -ne 0 ]]; then
+            echo "Something wrong..."
+            return 1
+        fi
 
-            if [[ $? -eq 0 ]]; then
-                echo "Checking PTS jump..."
-                check_pts "$dst/$dstname.$ext"
+        mkdir -p "$dst"
+        echo "Merging $dstname ..."
+        ffmpeg -allowed_extensions ts,m3u8key -v warning -xerror -err_detect explode -i "$src" -c copy "$dst/$dstname.$ext"
+        if [[ $? -ne 0 ]]; then
+            echo "Something wrong..."
+            return 1
+        fi
 
-                if [[ $? -ne 0 ]]; then
-                    return 1
-                fi
-            else
-                return 1
-            fi
-        else
+        echo "Checking PTS jump..."
+        check_pts "$dst/$dstname.$ext"
+        if [[ $? -ne 0 ]]; then
+            echo "Something wrong..."
             return 1
         fi
     done
