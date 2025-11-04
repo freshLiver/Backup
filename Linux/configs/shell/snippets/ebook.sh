@@ -76,10 +76,11 @@ function imgs2pdf () {
         -exec bash -c "tmp=\$(echo '{}' | cut -c3-) && convert \"\${tmp}\"/* \"\${tmp}.pdf\"" \;
 }
 
-function htmls2pdf() {
+function htmls2epub() {
     title="$1"
-    style="$2"
-    shift 2
+    cover="$2"
+    style="$3"
+    shift 3
 
     mkdir out
 
@@ -91,5 +92,15 @@ function htmls2pdf() {
             cat <(echo "<h1>$name</h1>") "$dir/$f" >> out/tmp-merged.html
         done
     done
-    pandoc out/tmp-merged.html -o out/book.epub --metadata title="$title"
+    pandoc out/tmp-merged.html -o out/"$title".epub -M title="$title" --epub-cover-image="$cover"
+}
+
+function html2pdf_pandoc() {
+    if [[ -n "$1" ]]; then
+        pandoc "$1" -o "pdf/${1%.html}.pdf"
+    else
+        for f in *.html; do
+            pandoc "$f" -o  "pdf/${f%.html}.pdf"
+        done
+    fi
 }

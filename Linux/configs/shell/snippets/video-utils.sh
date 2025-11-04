@@ -6,19 +6,22 @@ function conv2webm () {
         exit 1
     fi
 
-    ext=$1
+    exts=($(echo "$1" | tr ',' '\n'))
     out=${2:-done}
 
-    mkdir $ext && mv *.$ext $ext
-    mkdir $out
+    for ext in "${exts[@]}"; do
+        mkdir $ext
+        mv *.$ext $ext
+        mkdir -p $out/$ext
 
-    ext=$ext out=$out \
-    find . -type f -name "*.$ext" -exec \
-        bash -c '''
-                name=$(basename "{}" .$ext); 
-                ffmpeg -i "$ext/$name.$ext" -c:v libvpx-vp9 -crf 30 -b:v 0 -cpu-used 4 -c:a libopus "$out/$name.webm" && mv "$ext/$name.$ext" $out
-                ''' \
-        \;
+        ext=$ext out=$out \
+        find . -type f -name "*.$ext" -exec \
+            bash -c '''
+                    name=$(basename "{}" .$ext); 
+                    ffmpeg -i "$ext/$name.$ext" -c:v libvpx-vp9 -crf 30 -b:v 0 -cpu-used 4 -c:a libopus "$out/$name.webm" && mv "$ext/$name.$ext" "$out/$ext"
+                    ''' \
+            \;
+    done
 }
 
 command -v yt > /dev/null || alias yt="yt-dlp"
@@ -46,6 +49,7 @@ function check_pts() {
     fi
 
     for f in "${files[@]}"; do
+        echo "Checking PTS jump for '$f' ..."
         ffprobe -select_streams v -show_packets -i $f -loglevel error | awk -F= '/pts_time/ {print $2}' | sort -V | awk '
         BEGIN { BAD = 0; }
         
@@ -69,12 +73,17 @@ function m3u8check () {
         
         if [[ -z "$srcdir/$key" ]]; then
             echo "WARN: Not encrypted, decryption checks will be skipped"
+        elif [[ $(stat -c %s "$srcdir/$key") -gt 16 ]]; then
+            echo "WARN: Key size > 16, try to decode from utf-8"
+            mv "$srcdir/$key" "$srcdir/$key.bak"
+            iconv -f UTF-8 -t ISO-8859-1 "$srcdir/$key.bak" > "$srcdir/$key"
         fi
 
         ts_files=($(grep ".ts" "$src"))
 
         echo "Checking files in $src (key=$srcdir/$key) ..."
         cnt=-1
+        errors=0
         for f in "${ts_files[@]}"; do
             cnt=$(($cnt + 1))
 
@@ -85,23 +94,30 @@ function m3u8check () {
             fi
 
             # try decrypt
+            mkdir -p "$srcdir/raw"
             if [[ ! -z "$key" ]]; then
-                openssl aes-128-cbc -d -in "$srcdir/$f" -K "$(xxd -p $srcdir/$key)" -iv "$(printf "%032x" $cnt)" -out /dev/null
+                openssl aes-128-cbc -d -in "$srcdir/$f" -K "$(xxd -p $srcdir/$key)" -iv "$(printf "%032x" $cnt)" -out "$srcdir/raw/$f"
                 if [[ $? -ne 0 ]]; then
                     echo "AES Decryption failed on $f ..."
-                    return 1
+                    errors=$(( $errors + 1 ))
                 fi
             fi
         done
+        return errors
     done
 }
 
 function m3u8merge () {
-    ext="${1}"
-    dst="${2}"
-    shift 2
+    m3u8="${1}"
+    ext="${2}"
+    dst="${3}"
+    shift 3
 
     for f in "$@"; do
+        if [[ -d "$f" ]]; then
+            f="$f/$m3u8"
+        fi
+
         src=$(realpath $f)
         dirpath="$(dirname $src)"
         dstname="$(basename $dirpath)"
