@@ -104,3 +104,19 @@ function html2pdf_pandoc() {
         done
     fi
 }
+
+function epub_extract_imgs() {
+    rm -rf OPS out
+    unzip $1 "OPS/*"
+
+    page=0
+    mkdir -p out
+    for img in $(grep -oP 'href="\K[^"]+' OPS/standard.opf | grep -i "images/"); do
+        echo "OPS/$img -> out/$(printf "%04d-$(basename $img)" $page)"
+        mv "OPS/$img" "out/$(printf "%04d-$(basename $img)" $page)"
+        page=$(($page + 1))
+    done
+
+    mv out "${1%.epub}"
+    rm -rf OPS
+}
