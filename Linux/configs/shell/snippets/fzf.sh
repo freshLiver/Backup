@@ -13,7 +13,12 @@ function ffzf () {
     find $@ | fzf
 }
 function ffcd () {
-    cd $(find $@ -type d | fzf)
+    cd "$(find $@ -type d | fzf)"
+}
+function ffcdq () {
+    root="$(realpath $1)"
+    shift 1
+    cd "$(find $root -type d | fzf -f $@ | sort -V | head -1)"
 }
 function fzfq () {
     fzf --query "$1"
@@ -21,6 +26,18 @@ function fzfq () {
 function hfzf () {
     history | fzf
 }
+function fffq () {
+    root="$(realpath $1)"
+    shift 1
+    find $root -type f | fzf -f $@ | sort -V | head -1
+}
 
 alias gcof='git checkout $(git branch | fzf)'
 alias grbf='git rebase $(git branch | fzf)'
+
+alias dk='docker stop $(docker ps -a | tail +2 | fzf | cut -d" " -f1)'
+
+function dc () {
+    docker commit $(docker ps -a | tail +2 | fzf | cut -d" " -f1) $@
+
+}
